@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Bookings</title>
-    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <style type="text/css">
@@ -11,6 +11,7 @@
             background-color: #923877;
 
         }
+
         body{
             padding-top: 50px;
             margin-left: 30px;
@@ -56,12 +57,103 @@
 
 </div>
 <div class="row" style="padding-top: 20px;">
-    <h2 style="color: white">
+    <pre style="color: white">
         This is where you can find the bookings.
-    </h2>
+    </pre>
 
 </div>
+<div class="row">
+    <div class = "col-sm">
+        <table class = "table-dark table-hover" cellpadding="10" border="3" style="border-color: #923877; background-color: #10153a;">
+            <caption style="color: #10153A">List of bookings</caption>
+            <thead>
+            <tr style="color: #FFFFFF">
+                <td>
+                    <h5>Booking ID</h5>
+                </td>
+                <td>
+                    <h5>Room ID</h5>
+                </td>
+                <td>
+                    <h5>Name</h5>
+                </td>
+                <td>
+                    <h5>Time of stay</h5>
+                </td>
+                <td>
 
+                </td>
+
+            </tr>
+            </thead>
+            <tr style="color: #FFFFFF">
+                <td>
+                    0000001
+                </td>
+                <td>
+                    002
+                </td>
+                <td>
+                    James Panda
+                </td>
+                <td>
+                    10.12 - 11.01
+                </td>
+                <td>
+                        <a href="edit_booking.html"><i class="far fa-edit"style="color: #FFFFFF"></i>
+                            <a href="bookings.html"><i class="far fa-calendar-times" style="color: #FFFFFF" ></i>
+                </td>
+
+
+            </tr>
+            <tr style="color: #FFFFFF">
+                <td>
+                    0000002
+                </td>
+                <td>
+                    001
+                </td>
+                <td>
+                    Earl Grey
+                </td>
+                <td>
+                    10.24 - 11.01
+                </td>
+                <td>
+                    <a href="edit_booking.html"><i class="far fa-edit"style="color: #FFFFFF"></i>
+                        <a href="bookings.html"><i class="far fa-calendar-times" style="color: #FFFFFF" ></i>
+                </td>
+
+
+            </tr>
+            <tr style="color: #FFFFFF">
+                <td>
+                    0000003
+                </td>
+                <td>
+                    002
+                </td>
+                <td>
+                    James Panda
+                </td>
+                <td>
+                    11.04 - 11.06
+                </td>
+                <td>
+                    <a href="edit_booking.html"><i class="far fa-edit"style="color: #FFFFFF"></i>
+                        <a href="bookings.html"><i class="far fa-calendar-times" style="color: #FFFFFF" ></i>
+                </td>
+
+            </tr>
+        </table>
+
+    </div>
+    <div class = "col-sm">
+        <a href = "edit_booking.html"><button type="button" class="btn btn-primary btn-lg" style="background-color: #923877; border-color: #923877">New booking</button>
+
+    </div>
+
+</div>
 
 </div>
 

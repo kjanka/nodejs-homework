@@ -64,7 +64,9 @@
 
 <div class="row">
     <div class = "col-sm">
-        <table cellpadding="10" border="3" style="border-color: #923877">
+        <table class = "table-dark table-hover" cellpadding="10" border="3" style="border-color: #923877; background-color: #10153a;">
+            <caption style="color: #10153A">List of guests</caption>
+            <thead>
             <tr style="color: #FFFFFF">
                 <td>
                     <h5>Guest ID</h5>
@@ -75,8 +77,12 @@
                 <td>
                     <h5>Category</h5>
                 </td>
+                <td>
+
+                </td>
 
             </tr>
+            </thead>
             <tr style="color: #FFFFFF">
                 <td>
                     g001
@@ -86,6 +92,10 @@
                 </td>
                 <td>
                     $$$
+                </td>
+                <td>
+                    <a href="edit_guest.html"><i class="fas fa-user-edit" style="color: #FFFFFF" ></i>
+                        <a href="guests.html"><i class="fas fa-user-times" style="color: #FFFFFF"></i>
                 </td>
 
             </tr>
@@ -99,6 +109,10 @@
                 <td>
                     $$$$
                 </td>
+                <td>
+                    <a href="edit_guest.html"><i class="fas fa-user-edit" style="color: #FFFFFF" ></i>
+                        <a href="guests.html"><i class="fas fa-user-times" style="color: #FFFFFF"></i>
+                </td>
 
             </tr>
             <tr style="color: #FFFFFF">
@@ -111,13 +125,17 @@
                 <td>
                     $
                 </td>
+                <td>
+                    <a href="edit_guest.html"><i class="fas fa-user-edit" style="color: #FFFFFF" ></i>
+                        <a href="guests.html"><i class="fas fa-user-times" style="color: #FFFFFF"></i>
+                </td>
 
             </tr>
         </table>
 
     </div>
     <div class = "col-sm">
-        This is where the buttons go
+        <a href = "edit_guest.html"><button type="button" class="btn btn-primary btn-lg" style="background-color: #923877; border-color: #923877">New guest</button>
 
     </div>
 

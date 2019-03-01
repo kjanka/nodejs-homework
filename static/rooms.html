@@ -8,7 +8,7 @@
     <style type="text/css">
         .navbar {
             background-color: #923877;
-
+            justify-content: center;
         }
         body{
             padding-top: 50px;
@@ -22,15 +22,15 @@
 <body >
 <div class ="container">
     <div class="row align-bottom ">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 
             <i class="fas fa-hippo" style="color: #C76977;"></i>
             <a class="navbar-brand" href="index.html">Hippo Hotel</a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
 
-            </button>
+            </div>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
@@ -62,7 +62,9 @@
 </div>
 <div class="row">
     <div class = "col-sm">
-    <table cellpadding="10" border="3" style="border-color: #923877">
+    <table class = "table-dark table-hover" cellpadding="10" border="3" style="border-color: #923877; background-color: #10153a;">
+        <caption style="color: #10153A">List of rooms</caption>
+        <thead>
         <tr style="color: #FFFFFF">
             <td>
                 <h5>Room ID</h5>
@@ -73,8 +75,12 @@
             <td>
                 <h5>Category</h5>
             </td>
+            <td>
+
+            </td>
 
         </tr>
+        </thead>
         <tr style="color: #FFFFFF">
             <td>
                 001
@@ -85,6 +91,11 @@
             <td>
                 $$$
             </td>
+            <td>
+                <a href="edit_room.html"><i class="far fa-edit" style="color: #FFFFFF" ></i>
+                    <a href="rooms.html"><i class="far fa-trash-alt" style="color: #FFFFFF"></i>
+            </td>
+
 
         </tr>
         <tr style="color: #FFFFFF">
@@ -97,6 +108,11 @@
             <td>
                 $$$$
             </td>
+            <td>
+                <a href="edit_room.html"><i class="far fa-edit" style="color: #FFFFFF" ></i>
+                    <a href="rooms.html"><i class="far fa-trash-alt" style="color: #FFFFFF"></i>
+            </td>
+
 
         </tr>
         <tr style="color: #FFFFFF">
@@ -109,13 +125,17 @@
             <td>
                 $$
             </td>
+            <td>
+                <a href="edit_room.html"><i class="far fa-edit" style="color: #FFFFFF" ></i>
+                    <a href="rooms.html"><i class="far fa-trash-alt" style="color: #FFFFFF"></i>
+            </td>
 
         </tr>
     </table>
 
 </div>
     <div class = "col-sm">
-    This is where the buttons go
+        <a href = "edit_room.html"><button type="button" class="btn btn-primary btn-lg" style="background-color: #923877; border-color: #923877">New room</button>
 
     </div>
 
