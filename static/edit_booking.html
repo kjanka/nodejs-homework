@@ -66,20 +66,34 @@
 
     <div class="form-group">
 
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-                <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-                <li><a href="#">JavaScript</a></li>
-            </ul>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Guest</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01" style="color: #FFFFFF; background-color: #923877">
+                <option selected >Choose...</option>
+                <option value="1">Earl Grey</option>
+                <option value="2">James Panda</option>
+                <option value="3">Ed Ward</option>
+            </select>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Room</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01" style="color: #FFFFFF; background-color: #923877">
+                <option selected>Choose...</option>
+                <option value="1">001</option>
+                <option value="2" >002</option>
+                <option value="3">003</option>
+            </select>
         </div>
 
 
 
-        <table class="table-condensed table-hover" id="calendar" border="1" style="border-color: #10153A; background-color: #C76977; color: #FFFFFF; outline-color: #10153a">
-            <label for="calendar" style="color: #FFFFFF">Select time of stay: </label>
+        <table class="table-condensed table-hover" id="calendar" border="1" style="border-color: #10153A; background-color: #FFFFFF; color: #10153A; outline-color: #10153a">
+            <label for="calendar" style="color: #FFFFFF">Time of stay: </label>
             <thead>
             <tr>
                 <th colspan="7">
@@ -156,8 +170,8 @@
 </div>
 </div>
 <div class = "row">
-    <a href = "rooms.html"><button type="button" class="btn btn-primary btn-lg" style="background-color: #10153A; border-color: #10153A;">Done</button>
-        <a href = "rooms.html"><button type="button" class="btn btn-outline-secondary btn-lg" style=" border-color: #10153A; color: #10153A;">Cancel</button>
+    <a href = "bookings.html"><button type="button" class="btn btn-primary btn-lg" style="background-color: #10153A; border-color: #10153A;">Done</button>
+        <a href = "bookings.html"><button type="button" class="btn btn-outline-secondary btn-lg" style=" border-color: #10153A; color: #10153A;">Cancel</button>
 
 </div>
 

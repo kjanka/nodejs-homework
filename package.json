@@ -13,6 +13,7 @@
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0",
+    "popper.js": "^1.14.7",
     "pug": "2.0.0-beta11",
     "save": "^2.3.3"
   },
