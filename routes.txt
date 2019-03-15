@@ -1,0 +1,18 @@
+
+
+ get+post /rooms/add - uj szoba
+get /rooms/del/:id - torles
+ get+post /rooms/mod/:id - modositas
+get /rooms - lista
+
+ get+post /guests/add
+get /guests/del/:id
+ get+post /guests/mod/:id
+get /guests - lista
+
+ get+post /bookings/add
+get /bookings/del/:id
+ get+post /bookings/mod/:id
+get /bookings
+
+get / - fooldal
