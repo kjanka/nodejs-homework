@@ -8,9 +8,9 @@ app.use(function (req, res, next) {
     return next();
 });
 
-//require('./routes/guests')(app);
+require('./routes/guests')(app);
 require('./routes/rooms')(app);
-//require('./routes/bookings')(app);
+require('./routes/bookings')(app);
 
 app.use(function (err, req, res, next) {
     res.status(500).send('Error!!');

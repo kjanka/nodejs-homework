@@ -9,6 +9,7 @@ var requireOption = require("../common").requireOption;
 
 module.exports = function(objectrepository){
     return function(req, res, next){
+        console.log("booking save mw");
         return next();
     };
 };

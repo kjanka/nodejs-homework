@@ -7,19 +7,45 @@ module.exports = function(app){
         };
     };
     var renderMW = require('../middleware/generic/render');
+    var checkRoom = require('../middleware/rooms/checkRoom');
+    var saveRoom = require('../middleware/rooms/saveRoom');
+    var loadRoom = require('../middleware/rooms/loadRoom');
+    var delRoom = require('../middleware/rooms/delRoom');
+    var loadRooms = require('../middleware/rooms/loadRooms');
 
     var objrep = {};
-    app.get('/rooms/add', authMW(), renderMW(objrep, 'roomadd'));
-    app.post('/rooms/add', authMW());
-    app.get('/rooms/del/:id', authMW());
-    app.get('/rooms/mod/:id', authMW(), renderMW(objrep, 'rooommod'));
-    app.post('/rooms/mod/:id', authMW());
-    app.get('/rooms', authMW(), renderMW(objrep, 'roomlist'));
+    app.get('/rooms/add',
+        authMW(),
+        renderMW(objrep, 'roomadd'),
+        checkRoom(objrep),
+        saveRoom(objrep)
+        );
+    app.post('/rooms/add',
+        authMW(),
+        checkRoom(objrep),
+        saveRoom(objrep)
+        );
+    app.get('/rooms/del/:id',
+        authMW(),
+        loadRoom(objrep),
+        delRoom(objrep)
+        );
+    app.get('/rooms/mod/:id',
+        authMW(),
+        renderMW(objrep, 'rooommod'),
+        loadRoom(objrep),
+        checkRoom(objrep),
+        saveRoom(objrep)
+        );
+    app.post('/rooms/mod/:id',
+        authMW(),
+        loadRoom(objrep),
+        checkRoom(objrep),
+        saveRoom(objrep)
+        );
+    app.get('/rooms',
+        authMW(),
+        renderMW(objrep, 'roomlist'),
+        loadRooms(objrep)
+        );
 };
-
-/*
- get+post /rooms/add - uj szoba
-get /rooms/del/:id - torles
- get+post /rooms/mod/:id - modositas
-get /rooms - lista
-*/
