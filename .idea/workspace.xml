@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="635b0a66-a156-44c1-8fb4-d39de2b8609b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/middleware/bookings/checkBooking.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/bookings/delBooking.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/bookings/loadBooking.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/bookings/loadBookings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/bookings/saveBooking.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/generic/render.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/guests/checkGuest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/guests/delGuest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/guests/loadGuest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/guests/loadGuests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/guests/saveGuest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/rooms/checkRoom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/rooms/delRoom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/rooms/loadRoom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/rooms/loadRooms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/rooms/saveRoom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/bookings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/guests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/rooms.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,19 +16,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/middleware/guests/delGuest.js">
+        <entry file="file://$PROJECT_DIR$/routes/bookings.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/middleware/bookings/delBooking.js">
+        <entry file="file://$PROJECT_DIR$/routes/rooms.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+            <state relative-caret-position="323">
+              <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -162,11 +143,6 @@
               <item name="homework" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -212,16 +188,23 @@
       <workItem from="1551417537387" duration="9680000" />
       <workItem from="1551548910119" duration="1645000" />
       <workItem from="1551965433087" duration="162000" />
-      <workItem from="1552676282502" duration="6849000" />
+      <workItem from="1552676282502" duration="7257000" />
     </task>
+    <task id="LOCAL-00001" summary="asd">
+      <created>1552688745690</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1552688745690</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31769000" />
+    <option name="totallyTimeSpent" value="32177000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2247191" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -245,6 +228,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="asd" />
+    <option name="LAST_COMMIT_MESSAGE" value="asd" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/routes/index.js">
@@ -420,27 +407,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/bookings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/rooms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -545,6 +515,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/middleware/bookings/delBooking.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/middleware/guests/delGuest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -552,10 +529,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/middleware/bookings/delBooking.js">
+    <entry file="file://$PROJECT_DIR$/routes/bookings.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/rooms.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
         </state>
       </provider>
     </entry>
