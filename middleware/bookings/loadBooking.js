@@ -1,6 +1,8 @@
 /**
  *
- * Ez a MW betolt egy foglalast.
+ * Ez a MW betolt egy foglalast a foglalas id alapjan.
+ * a bookings/mod/:id oldalra iranyit
+ * ha nincs ilyen id-val foglalas, akkor a bookings/ oldalra iranyit.
  */
 
 var requireOption = require("../common").requireOption;

@@ -1,6 +1,7 @@
 /**
  *
- * Ez a MW kitorol egy foglalast.
+ * Ez a MW kitorol egy foglalast a foglalas id-ja alapjan.
+ * torles utan a bookings/ oldalra iranyit.
  */
 
 var requireOption = require("../common").requireOption;

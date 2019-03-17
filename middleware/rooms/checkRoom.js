@@ -1,6 +1,6 @@
 /**
  *
- * Ez a MW megnezi, hogy a szoba adatai megfeleloek e.
+ * Ez a MW megnezi, hogy a szoba adatai megfeleloek e az id alapjan.
  */
 
 var requireOption = require("../common").requireOption;

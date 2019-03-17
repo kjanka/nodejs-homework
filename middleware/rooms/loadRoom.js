@@ -1,6 +1,7 @@
 /**
  *
- * Ez a MW betolt egy szobat.
+ * Ez a MW betolt egy szobat az id alapjan.
+ * Ha nincs ilyen id, a rooms/ oldalra iranyit, egyebkent a rooms/mod/:id oldalra kerulunk.
  */
 
 var requireOption = require("../common").requireOption;

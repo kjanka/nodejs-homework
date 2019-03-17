@@ -1,6 +1,6 @@
 /**
  *
- * Ez a MW megnezi, hogy a foglalas adatai megfeleloek e.
+ * Ez a MW megnezi, hogy a foglalas adatai megfeleloek e az adott foglalas id-ja alapjan
 
  */
 

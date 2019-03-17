@@ -1,6 +1,7 @@
 /**
  *
  * Ez a MW kitorol egy vendeget.
+ * Torles utan a guests/ oldalra iranyit.
  */
 
 var requireOption = require("../common").requireOption;

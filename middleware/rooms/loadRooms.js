@@ -1,6 +1,6 @@
 /**
  *
- * Ez a MW betolti a szobakat.
+ * Ez a MW betolti az osszes szoba adatait az adatbazisbol.
  */
 
 var requireOption = require("../common").requireOption;

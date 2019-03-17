@@ -1,6 +1,6 @@
 /**
  *
- * Ez a MW betolti a foglalasokat.
+ * Ez a MW betolti az osses foglalast az adatbazisbol.
  */
 
 var requireOption = require("../common").requireOption;

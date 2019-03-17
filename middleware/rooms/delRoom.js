@@ -1,6 +1,8 @@
 /**
  *
- * Ez a MW kitorol egy szobat.
+ * Ez a MW kitorol egy szobat az id alapjan.
+ * Torles utan a rooms/ oldalra iranyit.
+ *
  */
 
 var requireOption = require("../common").requireOption;

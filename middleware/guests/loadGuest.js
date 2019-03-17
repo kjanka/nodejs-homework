@@ -1,6 +1,7 @@
 /**
  *
- * Ez a MW betolt egy vendeget.
+ * Ez a MW betolt egy vendeget az id alapjan.
+ * Ha nincs ilyen id, a guests/ oldalra iranyit, egyebkent a guests/mod/:id oldara kerulunk.
  */
 
 var requireOption = require("../common").requireOption;

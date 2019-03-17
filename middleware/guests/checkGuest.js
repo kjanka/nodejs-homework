@@ -1,6 +1,6 @@
 /**
  *
- * Ez a MW megnezi, hogy a vendeg adatai megfeleloek e.
+ * Ez a MW megnezi, hogy a vendeg adatai megfeleloek e az adott vendeg id-ja alapjan.
 
  */
 

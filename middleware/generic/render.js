@@ -1,5 +1,6 @@
 /**
  * ez a render mw
+ * megkapja a templatet, amit az utana hivott mw-k kitoltenek
  */
 /*var db ={
     getAll: function(){

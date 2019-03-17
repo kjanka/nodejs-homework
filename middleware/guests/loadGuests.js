@@ -1,6 +1,6 @@
 /**
  *
- * Ez a MW betolti a vendegeket.
+ * Ez a MW betolti az osszes vendeget az adatbazisbol.
  */
 
 var requireOption = require("../common").requireOption;
