@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="635b0a66-a156-44c1-8fb4-d39de2b8609b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/bookings/checkBooking.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/bookings/checkBooking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/bookings/delBooking.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/bookings/delBooking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/bookings/loadBooking.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/bookings/loadBooking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/bookings/loadBookings.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/bookings/loadBookings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/generic/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/generic/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/generic/render.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/generic/render.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/guests/checkGuest.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/guests/checkGuest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/guests/delGuest.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/guests/delGuest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/guests/loadGuest.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/guests/loadGuest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/guests/loadGuests.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/guests/loadGuests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/rooms/checkRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/rooms/checkRoom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/rooms/delRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/rooms/delRoom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/rooms/loadRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/rooms/loadRoom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/rooms/loadRooms.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/rooms/loadRooms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="635b0a66-a156-44c1-8fb4-d39de2b8609b" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -228,7 +211,7 @@
       <workItem from="1551965433087" duration="162000" />
       <workItem from="1552676282502" duration="7257000" />
       <workItem from="1552731342928" duration="4956000" />
-      <workItem from="1552838494995" duration="1061000" />
+      <workItem from="1552838494995" duration="1195000" />
     </task>
     <task id="LOCAL-00001" summary="asd">
       <created>1552688745690</created>
@@ -237,15 +220,21 @@
       <option name="project" value="LOCAL" />
       <updated>1552688745690</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="hazi3">
+      <created>1552839572215</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1552839572215</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38194000" />
+    <option name="totallyTimeSpent" value="38328000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2247191" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -272,7 +261,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="asd" />
-    <option name="LAST_COMMIT_MESSAGE" value="asd" />
+    <MESSAGE value="hazi3" />
+    <option name="LAST_COMMIT_MESSAGE" value="hazi3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/routes/index.js">
