@@ -7,6 +7,33 @@
 
 </div>
 
+
+
+
+<% var guest_array = [
+    {id : "g001",
+        name: "Ed Ward",
+        category : "$$$$$"},
+    {id : "g002",
+        name: "Marie Curie",
+        category : "$"},
+    {id : "g003",
+        name: "James Panda",
+        category : "$$$"},
+    {id : "g004",
+        name: "Bill Gate$",
+        category : "$$$$$$$$"},
+    {id : "g005",
+        name: "Alexander the Great",
+        category : "$$$$"},
+    {id : "g006",
+        name: "Justa Guy",
+        category : "$$"}
+];%>
+
+
+
+
 <div class="row">
     <div class = "col-sm">
         <table class = "table-dark table-hover" cellpadding="10" border="3" style="border-color: #923877; background-color: #10153a;">
@@ -28,54 +55,30 @@
 
             </tr>
             </thead>
+
+
+
+            <% for(key in guest_array) { var one_guest = guest_array[key]; %>
+
+
             <tr style="color: #FFFFFF">
                 <td>
-                    g001
+                    <%= one_guest.id %>
                 </td>
                 <td>
-                    Ed Ward
+                    <%= one_guest.name %>
                 </td>
                 <td>
-                    $$$
+                    <%= one_guest.category %>
                 </td>
                 <td>
-                    <a href="guests/mod/001"><i class="fas fa-user-edit" style="color: #FFFFFF" ></i>
+                    <a href="/guests/mod/<%= one_guest.id %>"><i class="fas fa-user-edit" style="color: #FFFFFF" ></i>
                         <a href="/guests"><i class="fas fa-user-times" style="color: #FFFFFF"></i>
                 </td>
 
             </tr>
-            <tr style="color: #FFFFFF">
-                <td>
-                    g002
-                </td>
-                <td>
-                    James Panda
-                </td>
-                <td>
-                    $$$$
-                </td>
-                <td>
-                    <a href="guests/mod/002"><i class="fas fa-user-edit" style="color: #FFFFFF" ></i>
-                        <a href="/guests"><i class="fas fa-user-times" style="color: #FFFFFF"></i>
-                </td>
+            <%}%>
 
-            </tr>
-            <tr style="color: #FFFFFF">
-                <td>
-                    g003
-                </td>
-                <td>
-                    Earl Grey
-                </td>
-                <td>
-                    $
-                </td>
-                <td>
-                    <a href="guests/mod/003"><i class="fas fa-user-edit" style="color: #FFFFFF" ></i>
-                        <a href="/guests"><i class="fas fa-user-times" style="color: #FFFFFF"></i>
-                </td>
-
-            </tr>
         </table>
 
     </div>

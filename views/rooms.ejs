@@ -5,6 +5,21 @@
     </pre>
 
 </div>
+
+
+<% var room_array = [
+    {id : "001",
+        cleaning: "NO",
+        category : "$$$"},
+    {id : "002",
+        cleaning: "YES",
+        category : "$$$$"},
+    {id : "003",
+        cleaning: "NO",
+        category : "$"}
+];%>
+
+
 <div class="row">
     <div class = "col-sm">
     <table class = "table-dark table-hover" cellpadding="10" border="3" style="border-color: #923877; background-color: #10153a;">
@@ -24,58 +39,37 @@
 
             </td>
 
+
+
+
+
         </tr>
         </thead>
+
+
+
+
+        <% for(key in room_array) { var one_room = room_array[key]; %>
+
+
         <tr style="color: #FFFFFF">
             <td>
-                001
+                <%= one_room.id %>
             </td>
             <td>
-                NO
+                <%= one_room.cleaning %>
             </td>
             <td>
-                $$$
+                <%= one_room.category%>
             </td>
             <td>
-                <a href="/rooms/mod/01"><i class="far fa-edit" style="color: #FFFFFF" ></i>
-                    <a href="/rooms"><i class="far fa-trash-alt" style="color: #FFFFFF"></i>
-            </td>
-
-
-        </tr>
-        <tr style="color: #FFFFFF">
-            <td>
-                002
-            </td>
-            <td>
-                YES
-            </td>
-            <td>
-                $$$$
-            </td>
-            <td>
-                <a href="/rooms/mod/02"><i class="far fa-edit" style="color: #FFFFFF" ></i>
-                    <a href="/rooms"><i class="far fa-trash-alt" style="color: #FFFFFF"></i>
-            </td>
-
-
-        </tr>
-        <tr style="color: #FFFFFF">
-            <td>
-                003
-            </td>
-            <td>
-                NO
-            </td>
-            <td>
-                $$
-            </td>
-            <td>
-                <a href="/rooms/mod/03"><i class="far fa-edit" style="color: #FFFFFF" ></i>
+                <a href="/rooms/mod/<%= one_room.id %>"><i class="far fa-edit" style="color: #FFFFFF" ></i>
                     <a href="/rooms"><i class="far fa-trash-alt" style="color: #FFFFFF"></i>
             </td>
 
         </tr>
+        <%}%>
+
     </table>
 
 </div>

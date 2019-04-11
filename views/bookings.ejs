@@ -6,10 +6,24 @@
 
 </div>
 
-object test;
+<% var booking_array = [
+    {id : "0000001",
+        room_id: "002",
+        name : "James Panda",
+        time : "09.01 -10.02"},
+    {id : "0000002",
+        room_id: "001",
+        name : "James Panda",
+        time : "10.14 -10.17"},
+    {id : "0000003",
+        room_id: "002",
+        name : "Earl Grey",
+        time : "11.01 -11.12"}
+];%>
+
 <div class="row">
     <div class = "col-sm">
-        <table class = "table-dark table-hover" cellpadding="10" border="3" style="border-color: #923877; background-color: #10153a;">
+        <table class = "table-dark table-hover" cellpadding="10" border="3" style="border-color: #923877; background-color: #10153a; color: #FFFFFF">
             <caption style="color: #10153A">List of bookings</caption>
             <thead>
             <tr style="color: #FFFFFF">
@@ -33,66 +47,32 @@ object test;
             </thead>
 
 
-
-            <tr style="color: #FFFFFF">
-                <td>
-                    0000001
-                </td>
-                <td>
-                    002
-                </td>
-                <td>
-                    James Panda
-                </td>
-                <td>
-                    10.12 - 11.01
-                </td>
-                <td>
-                    <a href="/bookings/mod/001"><i class="far fa-edit" style="color: #FFFFFF"></i>
-                        <a href="/bookings"><i class="far fa-calendar-times" style="color: #FFFFFF" ></i>
-                </td>
+<% for(key in booking_array) { var one_booking = booking_array[key]; %>
 
 
-            </tr>
-            <tr style="color: #FFFFFF">
-                <td>
-                    0000002
-                </td>
-                <td>
-                    001
-                </td>
-                <td>
-                    Earl Grey
-                </td>
-                <td>
-                    10.24 - 11.01
-                </td>
-                <td>
-                    <a href="/bookings/mod/002"><i class="far fa-edit" style="color: #FFFFFF"></i>
-                        <a href="/bookings"><i class="far fa-calendar-times" style="color: #FFFFFF" ></i>
-                </td>
+                <tr style="color: #FFFFFF">
+                    <td>
+                        <%= one_booking.id %>
+                    </td>
+                    <td>
+                        <%= one_booking.room_id %>
+                    </td>
+                    <td>
+                        <%= one_booking.name %>
+                    </td>
+                    <td>
+                        <%= one_booking.time %>
+                    </td>
+                    <td>
+                        <a href="/bookings/mod/<%= one_booking.id %>"><i class="far fa-edit" style="color: #FFFFFF"></i>
+                            <a href="/bookings"><i class="far fa-calendar-times" style="color: #FFFFFF" ></i>
+                    </td>
 
 
-            </tr>
-            <tr style="color: #FFFFFF">
-                <td>
-                    0000003
-                </td>
-                <td>
-                    002
-                </td>
-                <td>
-                    James Panda
-                </td>
-                <td>
-                    11.04 - 11.06
-                </td>
-                <td>
-                    <a href="/bookings/mod/003"><i class="far fa-edit" style="color: #FFFFFF"></i>
-                        <a href="/bookings"><i class="far fa-calendar-times" style="color: #FFFFFF" ></i>
-                </td>
+                </tr>
 
-            </tr>
+            <%}%>
+
         </table>
 
     </div>
