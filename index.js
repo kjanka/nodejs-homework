@@ -1,13 +1,14 @@
 var express = require('express');
 var app = express();
 
-
+app.set('view engine', 'ejs');
 
 app.use(function (req, res, next) {
     res.tpl = {};
     return next();
 });
-
+require('./routes/index')(app);
+require('./routes/rules')(app);
 require('./routes/guests')(app);
 require('./routes/rooms')(app);
 require('./routes/bookings')(app);

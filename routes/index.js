@@ -1,9 +1,17 @@
-var express = require('express');
-var router = express.Router();
+module.exports = function(app){
+  //app.use (express.static('static'));
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+  var authMW = function(){
+    return function(req, res, next){
+      return next();
+    };
+  };
 
-module.exports = router;
+  var renderMW = require('../middleware/generic/render');
+
+  var objrep = {};
+  app.get('/', authMW(),
+      renderMW(objrep, 'index')
+  );
+
+}

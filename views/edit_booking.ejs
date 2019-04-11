@@ -1,0 +1,127 @@
+<%- include('header', {pagetitle: "Edit booking"}) -%>
+
+
+</div>
+<div class="row" style="padding-top: 20px;">
+    <h2 style="color: white">
+
+    </h2>
+
+</div>
+
+<div class="row" style="padding-top: 20px;">
+<div class = "col-3">
+
+    <div class="form-group">
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Guest</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01" style="color: #FFFFFF; background-color: #923877">
+                <option selected >Choose...</option>
+                <option value="1">Earl Grey</option>
+                <option value="2">James Panda</option>
+                <option value="3">Ed Ward</option>
+            </select>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Room</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01" style="color: #FFFFFF; background-color: #923877">
+                <option selected>Choose...</option>
+                <option value="1">001</option>
+                <option value="2" >002</option>
+                <option value="3">003</option>
+            </select>
+        </div>
+
+
+
+        <table class="table-condensed table-hover" id="calendar" border="1" style="border-color: #10153A; background-color: #FFFFFF; color: #10153A; outline-color: #10153a">
+            <label for="calendar" style="color: #FFFFFF">Time of stay: </label>
+            <thead>
+            <tr>
+                <th colspan="7">
+                        <span class="btn-group">
+                            <a class="btn"><i class="icon-chevron-left" style="color: #10153a"></i></a>
+                        	<a class="btn active">February 2032</a>
+                        	<a class="btn"><i class="icon-chevron-right" style="color: #923877"></i></a>
+                        </span>
+                </th>
+            </tr>
+            <tr>
+
+                <th>Mo</th>
+                <th>Tu</th>
+                <th>We</th>
+                <th>Th</th>
+                <th>Fr</th>
+                <th>Sa</th>
+                <th>Su</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="muted">29</td>
+                <td class="muted">30</td>
+                <td class="muted">31</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td class="btn-primary"><strong>20</strong></td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td class="muted">1</td>
+                <td class="muted">2</td>
+                <td class="muted">3</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
+</div>
+<div class = "row">
+    <a href = "/bookings"><button type="button" class="btn btn-primary btn-lg" style="background-color: #10153A; border-color: #10153A;">Done</button>
+        <a href = "/bookings"><button type="button" class="btn btn-outline-secondary btn-lg" style=" border-color: #10153A; color: #10153A;">Cancel</button>
+
+</div>
+
+</body>
+</html>

@@ -16,7 +16,7 @@ var loadBookings = require('../middleware/bookings/loadBookings');
 
 var objrep = {};
 app.get('/bookings/add', authMW(),
-    renderMW(objrep, 'bookingadd'),
+    renderMW(objrep, 'edit_booking'),
     checkBooking(objrep),
     saveBooking(objrep)
 );
@@ -32,7 +32,7 @@ app.get('/bookings/del/:id',
     );
 app.get('/bookings/mod/:id',
     authMW(),
-    renderMW(objrep, 'bookingmod'),
+    renderMW(objrep, "edit_booking"),
     loadBooking(objrep),
     checkBooking(objrep),
     saveBooking(objrep)
@@ -45,7 +45,7 @@ app.post('/bookings/mod/:id',
     );
 app.get('/bookings',
     authMW(),
-    renderMW(objrep, 'bookinglist'),
+    renderMW(objrep, "bookings"),
     loadBookings(objrep)
     );
 };

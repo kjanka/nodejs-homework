@@ -16,7 +16,7 @@ module.exports = function(app){
     var objrep = {};
     app.get('/rooms/add',
         authMW(),
-        renderMW(objrep, 'roomadd'),
+        renderMW(objrep, 'edit_room'),
         checkRoom(objrep),
         saveRoom(objrep)
         );
@@ -32,7 +32,7 @@ module.exports = function(app){
         );
     app.get('/rooms/mod/:id',
         authMW(),
-        renderMW(objrep, 'rooommod'),
+        renderMW(objrep, 'edit_room'),
         loadRoom(objrep),
         checkRoom(objrep),
         saveRoom(objrep)
@@ -45,7 +45,7 @@ module.exports = function(app){
         );
     app.get('/rooms',
         authMW(),
-        renderMW(objrep, 'roomlist'),
+        renderMW(objrep, 'rooms'),
         loadRooms(objrep)
         );
 };

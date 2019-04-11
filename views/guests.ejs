@@ -1,0 +1,91 @@
+<%- include('header', {pagetitle: "Guests"}) -%>
+
+<div class="row" style="padding-top: 20px;">
+    <pre style="color: white">
+        This is where you can find the registered guests.
+    </pre>
+
+</div>
+
+<div class="row">
+    <div class = "col-sm">
+        <table class = "table-dark table-hover" cellpadding="10" border="3" style="border-color: #923877; background-color: #10153a;">
+            <caption style="color: #10153A">List of guests</caption>
+            <thead>
+            <tr style="color: #FFFFFF">
+                <td>
+                    <h5>Guest ID</h5>
+                </td>
+                <td>
+                    <h5>Name</h5>
+                </td>
+                <td>
+                    <h5>Category</h5>
+                </td>
+                <td>
+
+                </td>
+
+            </tr>
+            </thead>
+            <tr style="color: #FFFFFF">
+                <td>
+                    g001
+                </td>
+                <td>
+                    Ed Ward
+                </td>
+                <td>
+                    $$$
+                </td>
+                <td>
+                    <a href="guests/mod/001"><i class="fas fa-user-edit" style="color: #FFFFFF" ></i>
+                        <a href="/guests"><i class="fas fa-user-times" style="color: #FFFFFF"></i>
+                </td>
+
+            </tr>
+            <tr style="color: #FFFFFF">
+                <td>
+                    g002
+                </td>
+                <td>
+                    James Panda
+                </td>
+                <td>
+                    $$$$
+                </td>
+                <td>
+                    <a href="guests/mod/002"><i class="fas fa-user-edit" style="color: #FFFFFF" ></i>
+                        <a href="/guests"><i class="fas fa-user-times" style="color: #FFFFFF"></i>
+                </td>
+
+            </tr>
+            <tr style="color: #FFFFFF">
+                <td>
+                    g003
+                </td>
+                <td>
+                    Earl Grey
+                </td>
+                <td>
+                    $
+                </td>
+                <td>
+                    <a href="guests/mod/003"><i class="fas fa-user-edit" style="color: #FFFFFF" ></i>
+                        <a href="/guests"><i class="fas fa-user-times" style="color: #FFFFFF"></i>
+                </td>
+
+            </tr>
+        </table>
+
+    </div>
+    <div class = "col-sm">
+        <a href = "guests/add"><button type="button" class="btn btn-primary btn-lg" style="background-color: #923877; border-color: #923877">New guest</button>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

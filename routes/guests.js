@@ -16,7 +16,7 @@ var renderMW = require('../middleware/generic/render');
 
 var objrep = {};
 app.get('/guests/add', authMW(),
-    renderMW(objrep, 'guestadd'),
+    renderMW(objrep, 'edit_guest'),
     checkGuest(objrep),
     saveGuest(objrep)
     );
@@ -32,7 +32,7 @@ app.get('/guests/del/:id',
     );
 app.get('/guests/mod/:id',
     authMW(),
-    renderMW(objrep, 'guestmod'),
+    renderMW(objrep, 'edit_guest'),
     loadGuest(objrep),
     checkGuest(objrep),
     saveGuest(objrep)
@@ -45,7 +45,7 @@ app.post('/guests/mod/:id',
     );
 app.get('/guests',
     authMW(),
-    renderMW(objrep, 'guestmod'),
+    renderMW(objrep, 'guests'),
     loadGuests(objrep)
     );
 };
