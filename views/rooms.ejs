@@ -22,10 +22,9 @@
 
 <div class="row">
     <div class = "col-sm">
-    <table class = "table-dark table-hover" cellpadding="10" border="3" style="border-color: #923877; background-color: #10153a;">
-        <caption style="color: #10153A">List of rooms</caption>
+    <table class = "table-dark table-hover" cellpadding="10" border="3">
         <thead>
-        <tr style="color: #FFFFFF">
+        <tr style="background-color: #d1e8e2; color:#116466;">
             <td>
                 <h5>Room ID</h5>
             </td>
@@ -52,7 +51,7 @@
         <% for(key in room_array) { var one_room = room_array[key]; %>
 
 
-        <tr style="color: #FFFFFF">
+        <tr style="background-color: #116466; color:#d1e8e2;">
             <td>
                 <%= one_room.id %>
             </td>
@@ -74,7 +73,7 @@
 
 </div>
     <div class = "col-sm">
-        <a href = "rooms/add"><button type="button" class="btn btn-primary btn-lg" style="background-color: #923877; border-color: #923877">New room</button>
+        <a href = "rooms/add"><button type="button" class="btn btn-primary btn-lg" style="background-color: #d9b08c; border-color: #d9b08c; color: #2c3531">New room</button>
 
     </div>
 
