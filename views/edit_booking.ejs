@@ -9,6 +9,41 @@
 
 </div>
 
+<% var guest_array = [
+    {id : "g001",
+        name: "Ed Ward",
+        category : "$$$$$"},
+    {id : "g002",
+        name: "Marie Curie",
+        category : "$"},
+    {id : "g003",
+        name: "James Panda",
+        category : "$$$"},
+    {id : "g004",
+        name: "Bill Gate$",
+        category : "$$$$$$$$"},
+    {id : "g005",
+        name: "Alexander the Great",
+        category : "$$$$"},
+    {id : "g006",
+        name: "Justa Guy",
+        category : "$$"}
+];%>
+
+<% var room_array = [
+    {id : "001",
+        cleaning: "NO",
+        category : "$$$"},
+    {id : "002",
+        cleaning: "YES",
+        category : "$$$$"},
+    {id : "003",
+        cleaning: "NO",
+        category : "$"}
+];%>
+
+
+
 <div class="row" style="padding-top: 20px;">
 <div class = "col-3">
 
@@ -19,10 +54,20 @@
                 <label class="input-group-text" for="inputGroupSelect01" style="background-color: #D1E8E2; color: #116466">Guest</label>
             </div>
             <select class="custom-select" id="inputGroupSelect01" style="color: #116466; background-color: #d9b08c">
+
                 <option selected >Choose...</option>
-                <option value="1">Earl Grey</option>
-                <option value="2">James Panda</option>
-                <option value="3">Ed Ward</option>
+
+                <% for(key in guest_array) { var one_guest = guest_array[key]; %>
+
+
+                <option >
+                    <%= one_guest.name %>
+                </option>
+                <%}%>
+
+
+
+
             </select>
         </div>
 
@@ -32,9 +77,13 @@
             </div>
             <select class="custom-select" id="inputGroupSelect01" style="color: #116466; background-color: #d9b08c">
                 <option selected>Choose...</option>
-                <option value="1">001</option>
-                <option value="2" >002</option>
-                <option value="3">003</option>
+                <% for (key in room_array){var one_room = room_array[key]; %>
+                <option >
+                    <%= one_room.id %>
+                    </option>
+
+                <%}%>
+
             </select>
         </div>
 
