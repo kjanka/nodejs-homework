@@ -6,21 +6,6 @@
 
 </div>
 
-<% var booking_array = [
-    {id : "0000001",
-        room_id: "002",
-        name : "James Panda",
-        time : "09.01 -10.02"},
-    {id : "0000002",
-        room_id: "001",
-        name : "James Panda",
-        time : "10.14 -10.17"},
-    {id : "0000003",
-        room_id: "002",
-        name : "Earl Grey",
-        time : "11.01 -11.12"}
-];%>
-
 <div class="row">
     <div class = "col-sm">
         <table class = "table-dark table-hover" cellpadding="10" border="3" >
@@ -37,7 +22,10 @@
                     <h5>Name</h5>
                 </td>
                 <td>
-                    <h5>Time of stay</h5>
+                    <h5>Start date</h5>
+                </td>
+                <td>
+                    <h5>End date</h5>
                 </td>
                 <td>
 
@@ -61,8 +49,11 @@
                         <%= one_booking.name %>
                     </td>
                     <td>
-                        <%= one_booking.time %>
+                        <%= one_booking.start_date %>
                     </td>
+                <td>
+                    <%= one_booking.end_date %>
+                </td>
                     <td>
                         <a href="/bookings/mod/<%= one_booking.id %>"><i class="far fa-edit" style="color: #FFFFFF"></i>
                             <a href="/bookings"><i class="far fa-calendar-times" style="color: #FFFFFF" ></i>

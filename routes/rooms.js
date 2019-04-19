@@ -45,7 +45,7 @@ module.exports = function(app){
         );
     app.get('/rooms',
         authMW(),
-        renderMW(objrep, 'rooms'),
-        loadRooms(objrep)
+        loadRooms(objrep),
+        renderMW(objrep, 'rooms')
         );
 };

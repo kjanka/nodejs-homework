@@ -7,18 +7,6 @@
 </div>
 
 
-<% var room_array = [
-    {id : "001",
-        cleaning: "NO",
-        category : "$$$"},
-    {id : "002",
-        cleaning: "YES",
-        category : "$$$$"},
-    {id : "003",
-        cleaning: "NO",
-        category : "$"}
-];%>
-
 
 <div class="row">
     <div class = "col-sm">
@@ -53,7 +41,7 @@
 
         <tr style="background-color: #116466; color:#d1e8e2;">
             <td>
-                <%= one_room.id %>
+                <%= one_room._id %>
             </td>
             <td>
                 <%= one_room.cleaning %>
