@@ -11,20 +11,7 @@ var loadBookings = require('../middleware/bookings/loadBookings');
 
 var objrep = {};
 
-    var bookings = [
-        {id : "0000001",
-            room_id: "002",
-            name : "James Panda",
-            time : "09.01 -10.02"},
-        {id : "0000002",
-            room_id: "001",
-            name : "James Panda",
-            time : "10.14 -10.17"},
-        {id : "0000003",
-            room_id: "002",
-            name : "Earl Grey",
-            time : "11.01 -11.12"}
-    ];
+
 
 
 app.get('/bookings/add', authMW(),
@@ -60,4 +47,5 @@ app.get('/bookings',
     renderMW(objrep, "bookings"),
     loadBookings(objrep)
     );
+
 };

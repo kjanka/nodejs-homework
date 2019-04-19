@@ -45,7 +45,7 @@ app.post('/guests/mod/:id',
     );
 app.get('/guests',
     authMW(),
-    renderMW(objrep, 'guests'),
-    loadGuests(objrep)
+    loadGuests(objrep),
+    renderMW(objrep, 'guests')
     );
 };

@@ -3,6 +3,10 @@ var app = express();
 
 app.set('view engine', 'ejs');
 
+const mongoose = require('mongoose');
+var Schema = require('mongoose').Schema;
+mongoose.connect('mongodb://localhost/nbksp5');
+
 app.use(function (req, res, next) {
     res.tpl = {};
     return next();
@@ -19,6 +23,8 @@ app.use(function (err, req, res, next) {
 
     console.error(err.stack);
 });
+
+
 
 app.use('/', function(req, res, next){
     next();
