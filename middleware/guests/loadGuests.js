@@ -9,7 +9,6 @@ const mongoose = require('mongoose');
 var Schema = require('mongoose').Schema;
 mongoose.connect('mongodb://localhost/nbksp5');
 
-
 module.exports = function(objectrepository){
     return function(req, res, next){
         console.log("osszes guest load mw");
