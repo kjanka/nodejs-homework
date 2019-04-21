@@ -9,41 +9,6 @@
 
 </div>
 
-<% var guest_array = [
-    {id : "g001",
-        name: "Ed Ward",
-        category : "$$$$$"},
-    {id : "g002",
-        name: "Marie Curie",
-        category : "$"},
-    {id : "g003",
-        name: "James Panda",
-        category : "$$$"},
-    {id : "g004",
-        name: "Bill Gate$",
-        category : "$$$$$$$$"},
-    {id : "g005",
-        name: "Alexander the Great",
-        category : "$$$$"},
-    {id : "g006",
-        name: "Justa Guy",
-        category : "$$"}
-];%>
-
-<% var room_array = [
-    {id : "001",
-        cleaning: "NO",
-        category : "$$$"},
-    {id : "002",
-        cleaning: "YES",
-        category : "$$$$"},
-    {id : "003",
-        cleaning: "NO",
-        category : "$"}
-];%>
-
-
-
 <div class="row" style="padding-top: 20px;">
 <div class = "col-3">
 
@@ -51,9 +16,9 @@
 
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <label class="input-group-text" for="inputGroupSelect01" style="background-color: #D1E8E2; color: #116466">Guest</label>
+                <label class="input-group-text" for="guestSelect" style="background-color: #FF2281; color: #ffffff">Guest</label>
             </div>
-            <select class="custom-select" id="inputGroupSelect01" style="color: #116466; background-color: #d9b08c">
+            <select class="custom-select" id="guestSelect" style="color: #011ffd; background-color: #FFFFFF">
 
                 <option selected >Choose...</option>
 
@@ -73,13 +38,13 @@
 
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <label class="input-group-text" for="inputGroupSelect01" style="background-color: #D1E8E2; color: #116466">Room</label>
+                <label class="input-group-text" for="roomSelect" style="background-color: #FF2281; color: #ffffff">Room</label>
             </div>
-            <select class="custom-select" id="inputGroupSelect01" style="color: #116466; background-color: #d9b08c">
+            <select class="custom-select" id="roomSelect" style="color: #011ffd; background-color: #FFFFFF">
                 <option selected>Choose...</option>
                 <% for (key in room_array){var one_room = room_array[key]; %>
                 <option >
-                    <%= one_room.id %>
+                    <%= one_room.name + " - " + one_room.category%>
                     </option>
 
                 <%}%>
@@ -89,86 +54,23 @@
 
 
 
-        <table class="table-condensed table-hover" id="calendar" border="1" style="border-color: #10153A; background-color: #d9b08c; color: #10153A; outline-color: #116466">
-            <label for="calendar" style="color: #D1E8E2">Time of stay: </label>
-            <thead>
-            <tr>
-                <th colspan="7">
-                        <span class="btn-group">
-                            <a class="btn"><i class="icon-chevron-left" style="color: #10153a"></i></a>
-                        	<a class="btn active">February 2032</a>
-                        	<a class="btn"><i class="icon-chevron-right" style="color: #923877"></i></a>
-                        </span>
-                </th>
-            </tr>
-            <tr>
 
-                <th>Mo</th>
-                <th>Tu</th>
-                <th>We</th>
-                <th>Th</th>
-                <th>Fr</th>
-                <th>Sa</th>
-                <th>Su</th>
+        <label for="inputStartDate">Start date</label>
+        <input type="date" id="inputStartDare" class="form-control">
 
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td class="muted">29</td>
-                <td class="muted">30</td>
-                <td class="muted">31</td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-                <td>11</td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>13</td>
-                <td>14</td>
-                <td>15</td>
-                <td>16</td>
-                <td>17</td>
-                <td>18</td>
-            </tr>
-            <tr>
-                <td>19</td>
-                <td class="btn-primary"><strong>20</strong></td>
-                <td>21</td>
-                <td>22</td>
-                <td>23</td>
-                <td>24</td>
-                <td>25</td>
-            </tr>
-            <tr>
-                <td>26</td>
-                <td>27</td>
-                <td>28</td>
-                <td>29</td>
-                <td class="muted">1</td>
-                <td class="muted">2</td>
-                <td class="muted">3</td>
-            </tr>
-            </tbody>
-        </table>
+        <label for="inputEndDate">End date</label>
+        <input type="date" id="inputEndDate" class="form-control">
+        <small id="enddatehelp" class="form-text text-muted">
+            The end date should be after the start date. Emphasis on should be, we are too lazy to check at the moment.
+        </small>
 
 
     </div>
 </div>
 </div>
 <div class = "row">
-    <a href = "/bookings"><button type="button" class="btn btn-primary btn-lg" style="background-color: #D1E8E2; border-color: #D1E8E2; color: #116466">Done</button>
-        <a href = "/bookings"><button type="button" class="btn btn-outline-secondary btn-lg" style=" border-color: #D1E8E2; color: #D1E8E2;">Cancel</button>
+    <input type="submit" class="btn btn-primary btn-lg" style="background-color: #011ffd; border-color: #011ffd; color: #ffffff" ></input>
+        <a href = "/bookings"><button type="button" class="btn btn-outline-secondary btn-lg" style=" border-color: #011ffd; color: #011ffd;">Cancel</button>
 
 </div>
 

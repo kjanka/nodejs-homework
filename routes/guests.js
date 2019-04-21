@@ -14,10 +14,12 @@ var renderMW = require('../middleware/generic/render');
     var delGuest = require('../middleware/guests/delGuest');
     var loadGuests = require('../middleware/guests/loadGuests');
 
+    var Guest = require('../models/guest');
+
 var objrep = {};
 app.get('/guests/add', authMW(),
+    checkGuest(new Guest()),
     renderMW(objrep, 'edit_guest'),
-    checkGuest(objrep),
     saveGuest(objrep)
     );
 app.post('/guests/add',

@@ -8,12 +8,15 @@ var saveBooking = require('../middleware/bookings/saveBooking');
 var loadBooking = require('../middleware/bookings/loadBooking');
 var delBooking = require('../middleware/bookings/delBooking');
 var loadBookings = require('../middleware/bookings/loadBookings');
+var dbLoadMW = require('../middleware/generic/dbLoadMW');
+var Booking = require('../models/booking');
 
 var objrep = {};
 
 app.get('/bookings/add', authMW(),
+    checkBooking(new Booking()),
+    dbLoadMW(),
     renderMW(objrep, 'edit_booking'),
-    checkBooking(objrep),
     saveBooking(objrep)
 );
 app.post('/bookings/add',
@@ -41,6 +44,7 @@ app.post('/bookings/mod/:id',
     );
 app.get('/bookings',
     authMW(),
+    dbLoadMW(),
     loadBookings(objrep),
     renderMW(objrep, "bookings")
     );

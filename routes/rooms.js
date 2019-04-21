@@ -12,12 +12,14 @@ module.exports = function(app){
     var loadRoom = require('../middleware/rooms/loadRoom');
     var delRoom = require('../middleware/rooms/delRoom');
     var loadRooms = require('../middleware/rooms/loadRooms');
+    var Room = require('../models/room');
 
     var objrep = {};
     app.get('/rooms/add',
         authMW(),
+        checkRoom(new Room()),
         renderMW(objrep, 'edit_room'),
-        checkRoom(objrep),
+
         saveRoom(objrep)
         );
     app.post('/rooms/add',

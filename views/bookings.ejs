@@ -8,18 +8,15 @@
 
 <div class="row">
     <div class = "col-sm">
-        <table class = "table-dark table-hover" cellpadding="10" border="3" >
+        <table class = "table-dark table-hover" cellpadding="10" border="3" style ="border-color: #011ffd" >
 
             <thead>
-            <tr style="background-color: #d1e8e2; color:#116466;">
+            <tr style="background-color: #ffffff; color:#011ffd;">
                 <td>
-                    <h5>Booking ID</h5>
+                    <h5>Room</h5>
                 </td>
                 <td>
-                    <h5>Room ID</h5>
-                </td>
-                <td>
-                    <h5>Name</h5>
+                    <h5>Guest</h5>
                 </td>
                 <td>
                     <h5>Start date</h5>
@@ -38,15 +35,12 @@
 <% for(key in booking_array) { var one_booking = booking_array[key]; %>
 
 
-            <tr style="background-color: #116466; color:#d1e8e2;">
+            <tr style="background-color: #ffffff; color: #000000;">
                     <td>
-                        <%= one_booking.id %>
+                        <%= one_booking._room %>
                     </td>
                     <td>
-                        <%= one_booking.room_id %>
-                    </td>
-                    <td>
-                        <%= one_booking.name %>
+                        <%= one_booking._guest %>
                     </td>
                     <td>
                         <%= one_booking.start_date %>
@@ -55,8 +49,8 @@
                     <%= one_booking.end_date %>
                 </td>
                     <td>
-                        <a href="/bookings/mod/<%= one_booking.id %>"><i class="far fa-edit" style="color: #FFFFFF"></i>
-                            <a href="/bookings"><i class="far fa-calendar-times" style="color: #FFFFFF" ></i>
+                        <a href="/bookings/mod/<%= one_booking.id %>"><i class="far fa-edit" style="color: #011ffd"></i>
+                            <a href="/bookings"><i class="far fa-calendar-times" style="color: #011ffd" ></i>
                     </td>
 
 
@@ -68,7 +62,7 @@
 
     </div>
     <div class = "col-sm">
-        <a href = "/bookings/add"><button type="button" class="btn btn-primary btn-lg" style="background-color: #d9b08c; border-color: #d9b08c; color: #2c3531">New booking</button>
+        <a href = "/bookings/add"><button type="button" class="btn btn-primary btn-lg" style="background-color: #FF2281; border-color: #ff2281; color: #FFFFFF">New booking</button>
 
     </div>
 

@@ -5,10 +5,11 @@
  *
  */
 
-module.exports = function (objectrepository) {
+var requireOption = require("../common").requireOption;
 
-    return function (req, res, next) {
+module.exports = function(objectrepository){
+    return function(req, res, next){
         return next();
-    };
+        };
 
 };

@@ -10,6 +10,8 @@ module.exports = function(objectrepository){
     return function(req, res, next){
         console.log("guest load mw");
 
+
+
         return next();
     };
 };
