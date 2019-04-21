@@ -7,42 +7,12 @@
 
 </div>
 
-
-
-
-<% /*var guest_array = [
-    {id : "g001",
-        name: "Ed Ward",
-        category : "$$$$$"},
-    {id : "g002",
-        name: "Marie Curie",
-        category : "$"},
-    {id : "g003",
-        name: "James Panda",
-        category : "$$$"},
-    {id : "g004",
-        name: "Bill Gate$",
-        category : "$$$$$$$$"},
-    {id : "g005",
-        name: "Alexander the Great",
-        category : "$$$$"},
-    {id : "g006",
-        name: "Justa Guy",
-        category : "$$"}
-];*/%>
-
-
-
-
 <div class="row">
     <div class = "col-sm">
-        <table class = "table-dark table-hover" cellpadding="10" border="3">
+        <table class = "table-dark table-hover" cellpadding="10" border="3" style="border-color: #28cf75">
 
             <thead>
-            <tr style="background-color: #d1e8e2; color:#116466;">
-                <td>
-                    <h5>Guest ID</h5>
-                </td>
+            <tr style="background-color: #ffffff; color: #28cf75;">
                 <td>
                     <h5>Name</h5>
                 </td>
@@ -61,10 +31,7 @@
             <% for(key in guest_array) { var one_guest = guest_array[key]; %>
 
 
-            <tr style="background-color: #116466; color:#d1e8e2;">
-                <td>
-                    <%= one_guest._id %>
-                </td>
+            <tr style="background-color: #ffffff; color:#000000;">
                 <td>
                     <%= one_guest.name %>
                 </td>
@@ -72,8 +39,8 @@
                     <%= one_guest.category %>
                 </td>
                 <td>
-                    <a href="/guests/mod/<%= one_guest.id %>" ><i class="fas fa-user-edit" style="color: #FFFFFF" ></i>
-                        <a href="/guests"><i class="fas fa-user-times" style="color: #FFFFFF"></i>
+                    <a href="/guests/mod/<%= one_guest.id %>" ><i class="fas fa-user-edit" style="color: #28cf75" ></i>
+                        <a href="/guests"><i class="fas fa-user-times" style="color: #28cf75"></i>
                 </td>
 
             </tr>
@@ -83,7 +50,7 @@
 
     </div>
     <div class = "col-sm">
-        <a href="guests/add"><button type="button" class="btn btn-primary btn-lg" style="background-color: #d9b08c; border-color: #d9b08c; color: #2c3531">New guest</button>
+        <a href="guests/add"><button type="button" class="btn btn-primary btn-lg" style="background-color: #ff2281; border-color: #ff2281; color: #ffffff">New guest</button>
 
     </div>
 

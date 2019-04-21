@@ -7,6 +7,11 @@ var Room = mongoose.model('Room',{
         type: Number,
         required: true,
         default: false
+    },
+    name: {
+        type: String,
+        required: false,
+        default: "Default room name"
     }
 });
 
