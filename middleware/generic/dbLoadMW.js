@@ -8,7 +8,7 @@ mongoose.connect('mongodb://localhost/nbksp5');
 
 module.exports = function(objectrepository){
     return function(req, res, next){
-        console.log("auth mw");
+        console.log("DBLOAD");
         Guest.find().exec(function(err, result){
             if(err){
                 res.locals.guest_array = null;

@@ -32,14 +32,13 @@ app.get('/guests/del/:id',
     loadGuest(objrep),
     delGuest(objrep)
     );
-app.get('/guests/mod/:id',
+app.get('/guests/mod/:_id',
     authMW(),
-    renderMW(objrep, 'edit_guest'),
     loadGuest(objrep),
-    checkGuest(objrep),
-    saveGuest(objrep)
+    //checkGuest(objrep),
+    renderMW(objrep, 'edit_guest')
     );
-app.post('/guests/mod/:id',
+app.post('/guests/mod/:_id',
     authMW(),
     loadGuest(objrep),
     checkGuest(objrep),

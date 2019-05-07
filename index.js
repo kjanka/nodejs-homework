@@ -11,7 +11,7 @@ var Guest = require('./models/guest');
 var Room = require('./models/room');
 var Booking = require('./models/booking');
 
-var guest1 = new Guest();
+/*var guest1 = new Guest();
 guest1.name ="Ed Ward";
 guest1.category = 2;
 
@@ -62,7 +62,7 @@ var booking2 = new Booking({
 
 booking2.save(function(err){
     console.log("booking2 saved");
-});
+});*/
 
     app.use(function (req, res, next) {
     res.tpl = {};

@@ -17,10 +17,10 @@ module.exports = function(app){
     var objrep = {};
     app.get('/rooms/add',
         authMW(),
-        checkRoom(new Room()),
+        //checkRoom(objrep),
+        loadRoom(objrep),
         renderMW(objrep, 'edit_room'),
-
-        saveRoom(objrep)
+        //saveRoom(objrep)
         );
     app.post('/rooms/add',
         authMW(),
@@ -32,14 +32,13 @@ module.exports = function(app){
         loadRoom(objrep),
         delRoom(objrep)
         );
-    app.get('/rooms/mod/:id',
+    app.get('/rooms/mod/:_id',
         authMW(),
-        renderMW(objrep, 'edit_room'),
         loadRoom(objrep),
         checkRoom(objrep),
-        saveRoom(objrep)
+        renderMW(objrep, 'edit_room')
         );
-    app.post('/rooms/mod/:id',
+    app.post('/rooms/mod/:_id',
         authMW(),
         loadRoom(objrep),
         checkRoom(objrep),

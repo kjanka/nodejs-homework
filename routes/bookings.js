@@ -29,14 +29,14 @@ app.get('/bookings/del/:id',
     loadBooking(objrep),
     delBooking(objrep)
     );
-app.get('/bookings/mod/:id',
+app.get('/bookings/mod/:_id',
     authMW(),
-    renderMW(objrep, "edit_booking"),
     loadBooking(objrep),
     checkBooking(objrep),
-    saveBooking(objrep)
+    dbLoadMW(),
+    renderMW(objrep, "edit_booking")
     );
-app.post('/bookings/mod/:id',
+app.post('/bookings/mod/:_id',
     authMW(),
     loadBooking(objrep),
     checkBooking(objrep),

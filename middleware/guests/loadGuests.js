@@ -16,7 +16,7 @@ module.exports = function(objectrepository){
             if(err){
                 res.locals.guest_array = null;
             }
-            console.log(err, result);
+            //console.log(err, result);
             res.locals.guest_array = result;
             return next();
         });

@@ -1,4 +1,10 @@
 <%- include('header', {pagetitle: "Edit booking"}) -%>
+<% var currentBooking = res.locals.currentBooking;%>
+<% var isNew = false;%>
+<% if(currentBooking == null) isNew = true; %>
+<%console.log(isNew);%>
+<%var guest_array = res.locals.guest_array;%>
+<%var room_array = res.locals.room_array;%>
 
 
 </div>
@@ -23,7 +29,7 @@
                 <option selected >Choose...</option>
 
                 <% for(key in guest_array) { var one_guest = guest_array[key]; %>
-
+                <%console.log(one_guest.name) %>
 
                 <option >
                     <%= one_guest.name %>

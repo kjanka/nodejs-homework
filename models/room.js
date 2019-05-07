@@ -2,11 +2,14 @@ const mongoose = require('mongoose');
 var Schema = require('mongoose').Schema;
 
 var Room = mongoose.model('Room',{
-    cleaning: Boolean,
+    cleaning: {
+        type: Boolean,
+        default: false
+    },
     category: {
         type: Number,
         required: true,
-        default: false
+        default: 1
     },
     name: {
         type: String,
