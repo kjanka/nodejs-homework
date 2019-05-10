@@ -6,35 +6,46 @@ const mongoose = require('mongoose');
 var Schema = require('mongoose').Schema;
 mongoose.connect('mongodb://localhost/nbksp5');
 
-module.exports = function(objectrepository){
-    return function(req, res, next){
+module.exports = function (objectrepository) {
+    return function (req, res, next) {
         console.log("DBLOAD");
-        Guest.find().exec(function(err, result){
-            if(err){
+
+        let p1 = Guest.find().exec('find').then(
+            function (result) {
+                console.log("guest db");
+                res.locals.guest_array = result;
+
+            },
+            function (err) {
                 res.locals.guest_array = null;
             }
-            //console.log(err, result);
-            res.locals.guest_array = result;
+        );
 
-        });
-        Room.find().exec(function(err, result){
-            if(err){
-                res.locals.guest_array = null;
+        let p2 = Room.find().exec('find').then(function (result) {
+                console.log("room db");
+                res.locals.room_array = result;
+                console.log(res.locals.room_array);
+
+            },
+            function (err) {
+                res.locals.room_array = null;
             }
-            //console.log(err, result);
-            res.locals.room_array = result;
+        );
 
+        let p3 = Booking.find().exec('find').then(function (result) {
+                console.log("booking db");
+                res.locals.booking_array = result;
 
-        });
-        Booking.find().exec(function(err, result){
-            if(err){
-                res.locals.guest_array = null;
+            },
+            function (err) {
+                res.locals.booking_array = null;
             }
-            //console.log(err, result);
-            res.locals.booking_array = result;
+        );
+
+        return Promise.all([p1, p2, p3]).then(value => {
+            console.log('all');
             return next();
         });
-
 
     };
 };
