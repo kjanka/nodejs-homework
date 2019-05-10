@@ -1,10 +1,3 @@
-/**
- *
- * Ez a MW betolt egy foglalast a foglalas id alapjan.
- * a bookings/mod/:id oldalra iranyit
- * ha nincs ilyen id-val foglalas, akkor a bookings/ oldalra iranyit.
- */
-
 var requireOption = require("../common").requireOption;
 var Booking = require('../../models/booking');
 var Guest = require('../../models/guest');
@@ -15,15 +8,18 @@ mongoose.connect('mongodb://localhost/nbksp5');
 
 module.exports = function(objectrepository){
     return function(req, res, next){
-        console.log("booking load mw");
-        var currentBooking = Booking.findOne({
-            "_id": req.params._id
+        console.log("booking room load mw");
+        var currentBooking = res.locals.currentBooking;
+        var currentRoom = Room.findOne({
+            "_id": currentBooking._room
         }).exec(function(err, result){
             if(err){
-                res.locals.currentBooking = null;
+                res.locals.currentRoom = null;
+                console.log("room not found to booking");
             }
             //console.log(err, result);
-            res.locals.currentBooking = result;
+            res.locals.currentRoom = result;
+            res.locals.currentBooking = currentBooking;
             return next();
         });
 

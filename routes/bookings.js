@@ -6,6 +6,10 @@ var renderMW = require('../middleware/generic/render');
 var checkBooking = require('../middleware/bookings/checkBooking');
 var saveBooking = require('../middleware/bookings/saveBooking');
 var loadBooking = require('../middleware/bookings/loadBooking');
+
+var loadBookingRoom = require('../middleware/bookings/loadBookingRoom');
+var loadBookingGuest = require('../middleware/bookings/loadBookingGuest');
+
 var delBooking = require('../middleware/bookings/delBooking');
 var loadBookings = require('../middleware/bookings/loadBookings');
 var dbLoadMW = require('../middleware/generic/dbLoadMW');
@@ -32,6 +36,8 @@ app.get('/bookings/del/:id',
 app.get('/bookings/mod/:_id',
     authMW(),
     loadBooking(objrep),
+    loadBookingRoom(objrep),
+    loadBookingGuest(objrep),
     checkBooking(objrep),
     dbLoadMW(),
     renderMW(objrep, "edit_booking")

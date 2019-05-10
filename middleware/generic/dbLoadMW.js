@@ -15,7 +15,7 @@ module.exports = function(objectrepository){
             }
             //console.log(err, result);
             res.locals.guest_array = result;
-            //return next();
+
         });
         Room.find().exec(function(err, result){
             if(err){
@@ -24,15 +24,17 @@ module.exports = function(objectrepository){
             //console.log(err, result);
             res.locals.room_array = result;
 
+
         });
         Booking.find().exec(function(err, result){
             if(err){
                 res.locals.guest_array = null;
             }
-            console.log(err, result);
+            //console.log(err, result);
             res.locals.booking_array = result;
             return next();
         });
+
 
     };
 };

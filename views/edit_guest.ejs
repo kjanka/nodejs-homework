@@ -1,6 +1,8 @@
 <%-include('header', {pagetitle: "Edit guest"}) -%>
 
 <% var currentGuest = res.locals.currentGuest;%>
+
+
 <% var isNew = false;%>
 <% if(currentGuest == null) isNew = true; %>
 <%console.log(isNew);%>
