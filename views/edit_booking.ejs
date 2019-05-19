@@ -9,9 +9,6 @@
 <% var currentRoom = res.locals.currentRoom; %>
 <% var currentGuest = res.locals.currentGuest; %>
 
-<% console.log(currentGuest.name + " ----- " + currentRoom.name)%>
-<% console.log(guest_array) %>
-
 </div>
 <div class="row" style="padding-top: 20px;">
     <h2 style="color: white">
@@ -52,7 +49,7 @@
 
                 <% for(key in guest_array) { var one_guest = guest_array[key]; %>
 
-<%if(currentGuest.name === one_guest.name){%>
+<%if((typeof(currentBooking) !== 'undefined')&& (currentGuest.name === one_guest.name)){%>
                         <option selected >
                             <%= one_guest.name %>
                         </option>
@@ -82,7 +79,7 @@
 
                 <%}%>
                 <% for (key in room_array){var one_room = room_array[key]; %>
-                    <%if(currentRoom._id === one_room._id){%>
+                    <%if((typeof(currentBooking) !== 'undefined')&& (currentRoom._id === one_room._id)){%>
                         <option selected >
                             <%= one_room.name + " - " + one_room.category %>
                         </option>
@@ -120,7 +117,7 @@
 </div>
 </div>
 <div class = "row">
-    <input type="submit" class="btn btn-primary btn-lg" style="background-color: #011ffd; border-color: #011ffd; color: #ffffff" ></input>
+    <input type="submit" class="btn btn-primary btn-lg" style="background-color: #011ffd; border-color: #011ffd; color: #ffffff" value = "Done" ></input>
         <a href = "/bookings"><button type="button" class="btn btn-outline-secondary btn-lg" style=" border-color: #011ffd; color: #011ffd;">Cancel</button>
 
 </div>

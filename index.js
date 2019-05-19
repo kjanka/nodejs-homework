@@ -11,6 +11,13 @@ var Guest = require('./models/guest');
 var Room = require('./models/room');
 var Booking = require('./models/booking');
 
+/*var guest = new Guest();
+guest.name = "New Janka";
+guest.category = 16;
+guest.save(function (err) {
+    console.log("new Janka saved");
+});*/
+
 /*var guest1 = new Guest();
 guest1.name ="Ed Ward";
 guest1.category = 2;

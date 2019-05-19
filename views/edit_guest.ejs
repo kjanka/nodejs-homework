@@ -1,118 +1,119 @@
-<%-include('header', {pagetitle: "Edit guest"}) -%>
+<%- include('header', {pagetitle: "Edit guest"}) -%>
 
-<% var currentGuest = res.locals.currentGuest;%>
-
-
-<% var isNew = false;%>
-<% if(currentGuest == null) isNew = true; %>
-<%console.log(isNew);%>
+<% var currentGuest = res.locals.currentGuest; %>
+<% var isNew = false; %>
+<% if (currentGuest == null) isNew = true; %>
+<% console.log(isNew); %>
 </div>
-<div class="row" style="padding-top: 20px;">
+<form method="POST">
+    <div class="row" style="padding-top: 20px;">
 
-
-</div>
-
-
-
-
-
-<div class="row" style="padding-top: 20px; color: #FFFFFF">
-
-<div class = "col-3">
-
-    <div class="form-group">
-        <label for="name" style="color: #ff2281">Guest's name:</label>
-        <input type="text" class="form-control" id="name" style="background-color: #ffffff; color: #000000; border-color: #28cf75"
-
-        <%if(!isNew){%>
-        placeholder=" <%= currentGuest.name%>"
-        <%}%>
-        >
-
-
-
-        <div class="form-group" id="rangeCheck" style="color: #28cf75">
-                <label for="formCheckGroup" style="color: #ff2281">Price range:</label>
-                <div class="form-check" style="color: #28cf75" >
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="range1" value="1"
-                            <%if((isNew)|| (currentGuest.category ==1)){%>
-                           checked
-                    <%}%>
-                    >
-                    <label class="form-check-label" for="range1">
-                        $
-                    </label>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="range2" value="2"
-                    <%if((!isNew)&&(currentGuest.category == 2)){%>
-                    checked
-                           <%}%>
-                    >
-                    <label class="form-check-label" for="range2">
-                        $$
-                    </label>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="range3" value="3"
-                    <%if((!isNew)&&(currentGuest.category == 3)){%>
-                           checked
-                            <%}%>
-                    >
-                    <label class="form-check-label" for="range3">
-                        $$$
-                    </label>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="range4" value="4"
-
-                    <%if((!isNew)&&(currentGuest.category == 4)){%>
-                           checked
-                            <%}%>
-                    >
-                    <label class="form-check-label" for="range4"
-
-                    <%if((!isNew)&&(currentGuest.category == 4)){%>
-                           checked
-                            <%}%>
-                    >
-                        $$$$
-                    </label>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="range5" value="5"
-
-                    <%if((!isNew)&&(currentGuest.category == 5)){%>
-                           checked
-                            <%}%>
-
-                    >
-                    <label class="form-check-label" for="range5">
-                        $$$$$
-                    </label>
-                </div>
-            </div>
-
-        </div>
-
-</div>
-</div>
-    <div class = "row">
-        <a href = "/guests"><button type="button" class="btn btn-primary btn-lg" style="background-color: #28cf75; border-color: #28cf75; color: #FFFFFF">Done</button>
-            <a href = "/guests"><button type="button" class="btn btn-outline-secondary btn-lg" style=" border-color: #28cf75; color: #28cf75;">Cancel</button>
 
     </div>
 
 
+    <div class="row" style="padding-top: 20px; color: #FFFFFF">
+
+        <div class="col-3">
 
 
+            <div class="form-group">
+                <label for="name" style="color: #ff2281">Guest's name:</label>
+                <input type="text" class="form-control" id="name"
+                       style="background-color: #ffffff; color: #000000; border-color: #28cf75" name="name"
+
+                <% if(!isNew){ %>
+                       value = " <%= currentGuest.name %>"
+                        <% } %>
+                >
 
 
+                <div class="form-group" id="category"  style="color: #28cf75">
+                    <label for="formCheckGroup" style="color: #ff2281">Price range:</label>
+                    <div class="form-check" style="color: #28cf75">
+                        <input class="form-check-input" type="radio" name="category" id="range1" value="1"
+                        <% if((isNew) || (currentGuest.category == 1)){ %>
+                               checked
+                                <% } %>
+                        >
+                        <label class="form-check-label" for="range1">
+                            $
+                        </label>
+                    </div>
 
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="category" id="range2" value="2"
+                        <% if((!isNew) && (currentGuest.category == 2)){ %>
+                               checked
+                                <% } %>
+                        >
+                        <label class="form-check-label" for="range2">
+                            $$
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="category" id="range3" value="3"
+                        <% if((!isNew) && (currentGuest.category == 3)){ %>
+                               checked
+                                <% } %>
+                        >
+                        <label class="form-check-label" for="range3">
+                            $$$
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="category" id="range4" value="4"
+
+                        <% if((!isNew) && (currentGuest.category == 4)){ %>
+                               checked
+                                <% } %>
+                        >
+                        <label class="form-check-label" for="range4"
+
+                        <% if((!isNew) && (currentGuest.category == 4)){ %>
+                               checked
+                                <% } %>
+                        >
+                            $$$$
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="category" id="range5" value="5"
+
+                        <% if((!isNew) && (currentGuest.category == 5)){ %>
+                               checked
+                                <% } %>
+
+                        >
+                        <label class="form-check-label" for="range5">
+                            $$$$$
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <input type="submit" class="btn btn-primary btn-lg"
+               style="background-color: #28cf75; border-color: #28cf75; color: #FFFFFF" value="Done"></button>
+
+            <button type="button" class="btn btn-outline-secondary btn-lg"
+                    style=" border-color: #28cf75; color: #28cf75;">
+                Cancel
+            </button>
+
+    </div>
+
+</form>
+
+<script>
+    var category = document.querySelector('input[name = category]: checked').value;
+</script>
 
 </body>
 </html>

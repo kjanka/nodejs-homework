@@ -36,11 +36,11 @@
                     <%= one_guest.name %>
                 </td>
                 <td>
-                    <%= one_guest.category %>
+                    <%= one_guest.category%>
                 </td>
                 <td>
                     <a href="/guests/mod/<%= one_guest.id %>" ><i class="fas fa-user-edit" style="color: #28cf75" ></i>
-                        <a href="/guests"><i class="fas fa-user-times" style="color: #28cf75"></i>
+                        <a href="/guests/del/<%= one_guest.id %>"><i class="fas fa-user-times" style="color: #28cf75"></i>
                 </td>
 
             </tr>

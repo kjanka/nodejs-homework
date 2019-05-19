@@ -19,7 +19,6 @@ module.exports = function(objectrepository){
             if(err){
                 res.locals.currentGuest = null;
             }
-            //console.log(err, result);
             res.locals.currentGuest = result;
             return next();
         });

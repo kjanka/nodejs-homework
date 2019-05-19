@@ -16,18 +16,18 @@ var renderMW = require('../middleware/generic/render');
 
     var Guest = require('../models/guest');
 
+    const bodyParser = require('body-parser');
+
 var objrep = {};
 app.get('/guests/add', authMW(),
-    checkGuest(new Guest()),
     renderMW(objrep, 'edit_guest'),
-    saveGuest(objrep)
     );
 app.post('/guests/add',
     authMW(),
-    checkGuest(objrep),
+    bodyParser.urlencoded({ extended: true }),
     saveGuest(objrep)
     );
-app.get('/guests/del/:id',
+app.get('/guests/del/:_id',
     authMW(),
     loadGuest(objrep),
     delGuest(objrep)
@@ -35,13 +35,12 @@ app.get('/guests/del/:id',
 app.get('/guests/mod/:_id',
     authMW(),
     loadGuest(objrep),
-    //checkGuest(objrep),
     renderMW(objrep, 'edit_guest')
     );
 app.post('/guests/mod/:_id',
     authMW(),
     loadGuest(objrep),
-    checkGuest(objrep),
+    bodyParser.urlencoded({ extended: true }),
     saveGuest(objrep)
     );
 app.get('/guests',
