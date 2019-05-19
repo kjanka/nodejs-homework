@@ -7,61 +7,61 @@
 </div>
 
 
-
 <div class="row">
-    <div class = "col-sm">
-    <table class = "table-dark table-hover" cellpadding="10" border="3" style="border-color:#f148fb">
-        <thead>
-        <tr style="background-color: #ffffff; color:#f148fb;">
-            <td>
-                <h5>Room name</h5>
-            </td>
-            <td>
-                <h5>Under cleaning</h5>
-            </td>
-            <td>
-                <h5>Category</h5>
-            </td>
-            <td>
+    <div class="col-sm">
+        <table class="table-dark table-hover" cellpadding="10" border="3" style="border-color:#f148fb">
+            <thead>
+            <tr style="background-color: #ffffff; color:#f148fb;">
+                <td>
+                    <h5>Room name</h5>
+                </td>
+                <td>
+                    <h5>Under cleaning</h5>
+                </td>
+                <td>
+                    <h5>Category</h5>
+                </td>
+                <td>
 
-            </td>
-
-
+                </td>
 
 
+            </tr>
+            </thead>
 
-        </tr>
-        </thead>
+            <% for(key in room_array) { var one_room = room_array[key]; %>
 
+            <tr style="background-color: #ffffff; color:#000000;">
+                <td>
+                    <%= one_room.name %>
+                </td>
+                <td>
+                    <% if(one_room.cleaning){ %>
 
+                        <%= "YES" %>
+                    <% }else{%>
+                    <%= "NO" %>
+                    <% } %>
+                </td>
+                <td>
+                    <%= one_room.category %>
+                </td>
+                <td>
+                    <a href="/rooms/mod/<%= one_room.id %>"><i class="far fa-edit" style="color: #f148fb"></i>
+                        <a href="/rooms/del/<%= one_room.id %>"><i class="far fa-trash-alt" style="color: #f148fb"></i>
+                </td>
 
+            </tr>
+            <% } %>
 
-        <% for(key in room_array) { var one_room = room_array[key]; %>
+        </table>
 
-
-        <tr style="background-color: #ffffff; color:#000000;">
-            <td>
-                <%= one_room.name %>
-            </td>
-            <td>
-                <%= one_room.cleaning %>
-            </td>
-            <td>
-                <%= one_room.category%>
-            </td>
-            <td>
-                <a href="/rooms/mod/<%= one_room.id %>"><i class="far fa-edit" style="color: #f148fb" ></i>
-                    <a href="/rooms"><i class="far fa-trash-alt" style="color: #f148fb"></i>
-            </td>
-
-        </tr>
-        <%}%>
-
-    </table>
-
-</div>
-    <div class = "col-sm">
-        <a href = "rooms/add"><button type="button" class="btn btn-primary btn-lg" style="background-color: #ff2281; border-color: #ff2281; color: #ffffff">New room</button>
+    </div>
+    <div class="col-sm">
+        <a href="rooms/add">
+            <button type="button" class="btn btn-primary btn-lg"
+                    style="background-color: #ff2281; border-color: #ff2281; color: #ffffff">New room
+            </button>
 
     </div>
 

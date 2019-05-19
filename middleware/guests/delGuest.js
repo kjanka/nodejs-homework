@@ -21,8 +21,6 @@ module.exports = function (objectrepository) {
             res.locals.currentGuest.remove(err => {
                 return res.redirect("/guests");
             });
-
-
         }
     };
 };

@@ -1,128 +1,130 @@
 <%- include('header', {pagetitle: "Edit room"}) -%>
-<% var currentRoom = res.locals.currentRoom;%>
-<% var isNew = false;%>
-<% if(currentRoom == null) isNew = true %>
-
-
-
+<% var currentRoom = res.locals.currentRoom; %>
+<% var isNew = false; %>
+<% if (currentRoom == null) isNew = true %>
 
 
 </div>
-<div class="row" style="padding-top: 20px;">
-    <h2 style="color: white">
+<form method="POST">
+    <div class="row" style="padding-top: 20px;">
+        <h2 style="color: white">
 
-    </h2>
-
-</div>
-
-<div class="row" style="padding-top: 20px; color: #D1E8E2">
-<div class = "col-3">
-
-
-
-    <div class="form-group" >
-        <label for="name" style="color: #ff2281">Room name:</label>
-        <input type="text" class="form-control" id="name" style="background-color: #ffffff; color: #000000; border-color: #f148fb" placeholder=
-        <% if(isNew){%>
-        "Default room name"
-
-<%}else{%>
-        "<%= currentRoom.name %>"
-<%}%>
-        >
-
-        <div class="form-group" id="category" style="color: #f148fb">
-            <label for="vategory" style="color: #ff2281">Price range:</label>
-            <div class="form-check" style="color: #f148fb" >
-                <input class="form-check-input" type="radio" name="exampleRadios" id="range1" value="1" <%if((isNew) || (currentRoom.category == 1)){%>
-
-
-                       checked>
-
-                       <%}%>
-
-
-                <label class="form-check-label" for="range1">
-                    $
-                </label>
-            </div>
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="range2" value="2"<%if(!isNew && (currentRoom.category == 2)){%>
-
-
-                       checked>
-
-                <%}%>
-                <label class="form-check-label" for="range2">
-                    $$
-                </label>
-            </div>
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="range3" value="3"<%if(!isNew && (currentRoom.category == 3)){%>
-
-
-                       checked>
-
-                <%}%>
-                <label class="form-check-label" for="range3">
-                    $$$
-                </label>
-            </div>
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="range4" value="4"<%if(!isNew && (currentRoom.category == 4)){%>
-
-
-                       checked>
-
-                <%}%>
-                <label class="form-check-label" for="range4">
-                    $$$$
-                </label>
-            </div>
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="range5" value="5"<%if(!isNew && (currentRoom.category == 5)){%>
-
-
-                       checked>
-
-                <%}%>
-                <label class="form-check-label" for="range5">
-                    $$$$$
-                </label>
-            </div>
-        </div>
-        <div class="form-group">
-
-        </div>
-
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="cleaning" style="color: #f148fb"
-
-            <% if(!isNew && (currentRoom.cleaning == true)){%>
-                checked
-                    <%}%>
->
-            <label class="form-check-label" for="cleaning" style="color: #ff2281">
-                Under cleaning
-            </label>
-        </div>
-
-
-
-
+        </h2>
 
     </div>
-</div>
-</div>
-<div class = "row">
-    <input type="submit" class="btn btn-primary btn-lg" style="background-color: #f148fb; border-color: #f148fb; color: #FFFFFF" value = "Done">
-        <a href = "/rooms"><button type="button" class="btn btn-outline-secondary btn-lg" style=" border-color: #f148fb; color: #f148fb;">Cancel</button>
 
-</div>
+    <div class="row" style="padding-top: 20px; color: #D1E8E2">
+        <div class="col-3">
+
+
+            <div class="form-group">
+                <label for="name" style="color: #ff2281">Room name:</label>
+                <input type="text" class="form-control" id="name" name="name"
+                       style="background-color: #ffffff; color: #000000; border-color: #f148fb" value=
+                       <% if(isNew){ %>
+                           "Default room name"
+
+                <% }else{ %>
+                    "<%= currentRoom.name %>"
+                <% } %>
+                >
+
+                <div class="form-group" id="category" style="color: #f148fb">
+                    <label for="vategory" style="color: #ff2281">Price range:</label>
+                    <div class="form-check" style="color: #f148fb">
+                        <input class="form-check-input" type="radio" name="category" id="range1" value="1"
+                        <% if((isNew) || (currentRoom.category == 1)){ %>
+
+
+                               checked>
+
+                        <% } %>
+
+                        <label class="form-check-label" for="range1">
+                            $
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="category" id="range2" value="2"
+                        <% if(!isNew && (currentRoom.category == 2)){ %>
+
+
+                               checked>
+
+                        <% } %>
+                        <label class="form-check-label" for="range2">
+                            $$
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="category" id="range3" value="3"
+                        <% if(!isNew && (currentRoom.category == 3)){ %>
+
+
+                               checked>
+
+                        <% } %>
+                        <label class="form-check-label" for="range3">
+                            $$$
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="category" id="range4" value="4"
+                        <% if(!isNew && (currentRoom.category == 4)){ %>
+
+
+                               checked>
+
+                        <% } %>
+                        <label class="form-check-label" for="range4">
+                            $$$$
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="category" id="range5" value="5"
+                        <% if(!isNew && (currentRoom.category == 5)){ %>
+
+
+                               checked>
+
+                        <% } %>
+                        <label class="form-check-label" for="range5">
+                            $$$$$
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="cleaning" style="color: #f148fb" name="cleaning"
+                    <% if(!isNew && (currentRoom.cleaning == true)){ %>
+                           checked
+                            <% } %>
+                    >
+                    <label class="form-check-label" for="cleaning" style="color: #ff2281">
+                        Under cleaning
+                    </label>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <input type="submit" class="btn btn-primary btn-lg"
+               style="background-color: #f148fb; border-color: #f148fb; color: #FFFFFF" value="Done">
+        <button type="button" class="btn btn-outline-secondary btn-lg" style=" border-color: #f148fb; color: #f148fb;">
+            Cancel
+        </button>
+
+    </div>
+</form>
 
 </body>
 </html>

@@ -8,7 +8,6 @@ module.exports = function(app){
     };
 
 var renderMW = require('../middleware/generic/render');
-    var checkGuest = require('../middleware/guests/checkGuest');
     var saveGuest = require('../middleware/guests/saveGuest');
     var loadGuest = require('../middleware/guests/loadGuest');
     var delGuest = require('../middleware/guests/delGuest');

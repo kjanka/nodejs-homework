@@ -10,6 +10,14 @@ var requireOption = require("../common").requireOption;
 module.exports = function(objectrepository){
     return function(req, res, next){
         console.log("room torles mw");
-        return next();
+        if (typeof (res.locals.currentRoom) === 'undefined') {
+            return res.redirect("/rooms");
+        } else {
+            console.log("removing");
+            res.locals.currentRoom.remove(err => {
+                return res.redirect("/rooms");
+            });
+        }
+
     };
 };
