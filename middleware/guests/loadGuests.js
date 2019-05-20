@@ -1,6 +1,6 @@
 /**
  *
- * Ez a MW betolti az osszes vendeget az adatbazisbol.
+ * This mw loads all guests from the db
  */
 
 var requireOption = require("../common").requireOption;

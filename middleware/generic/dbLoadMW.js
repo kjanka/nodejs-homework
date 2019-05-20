@@ -1,3 +1,9 @@
+/**
+ * This mw loads all 3 tables and passes them (to the template)
+ * This is necessary for the booking list, as it requires rooms and guests as well
+ * @type {requireOption}
+ */
+
 var requireOption = require("../common").requireOption;
 var Booking = require('../../models/booking');
 var Guest = require('../../models/guest');

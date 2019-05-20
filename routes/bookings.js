@@ -3,7 +3,6 @@ module.exports = function(app){
 
     var authMW = require('../middleware/generic/auth')
 var renderMW = require('../middleware/generic/render');
-var saveBooking = require('../middleware/bookings/saveBooking');
 var loadBooking = require('../middleware/bookings/loadBooking');
 
 var loadBookingRoom = require('../middleware/bookings/loadBookingRoom');

@@ -1,7 +1,6 @@
 /**
  *
- * Ez a MW betolt egy vendeget az id alapjan.
- * Ha nincs ilyen id, a guests/ oldalra iranyit, egyebkent a guests/mod/:id oldara kerulunk.
+ * This mw loads a chosen guest from the db and passes it on (to the template)
  */
 
 var requireOption = require("../common").requireOption;

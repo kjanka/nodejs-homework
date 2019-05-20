@@ -1,7 +1,6 @@
 /**
  *
- * Ez a MW kitorol egy foglalast a foglalas id-ja alapjan.
- * torles utan a bookings/ oldalra iranyit.
+ * This mw deletes a chosen booking from the db
  */
 
 var requireOption = require("../common").requireOption;

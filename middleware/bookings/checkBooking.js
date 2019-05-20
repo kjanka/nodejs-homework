@@ -1,3 +1,10 @@
+/**
+ * This mw checks if a booking is new or one that's been modified.
+ * After that, we gather the (modified) attributes and save the new booking to the db.
+ * @type {requireOption}
+ */
+
+
 var requireOption = require("../common").requireOption;
 var Booking = require('../../models/booking');
 var Guest = require('../../models/guest');

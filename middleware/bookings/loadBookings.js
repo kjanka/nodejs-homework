@@ -1,6 +1,6 @@
 /**
  *
- * Ez a MW betolti az osses foglalast az adatbazisbol.
+ * This mw loads all bookings from the db and passes is on (to the template)
  */
 
 var requireOption = require("../common").requireOption;

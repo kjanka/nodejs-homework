@@ -1,7 +1,6 @@
 /**
  *
- * Ez a MW kitorol egy vendeget.
- * Torles utan a guests/ oldalra iranyit.
+ * This mw deletes a chosen guest and redirects the user to the guest list
  */
 
 var requireOption = require("../common").requireOption;

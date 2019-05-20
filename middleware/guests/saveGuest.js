@@ -1,8 +1,7 @@
 /**
  *
- * Ez a MW elmenti a szerkesztett vendeget.
- * Ha minden ok, tovabbkuld a vendegek listajara.
- * Ha nem, akkor a szerkesztesnel maradunk.
+ * This mw checks if a guest is new or one that's been modified
+ * Adter that, it gathers the attributes from the edit page and saves the guest to the db
  */
 var requireOption = require("../common").requireOption;
 var Guest = require('../../models/guest');

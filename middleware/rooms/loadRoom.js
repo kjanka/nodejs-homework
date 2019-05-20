@@ -1,7 +1,6 @@
 /**
  *
- * Ez a MW betolt egy szobat az id alapjan.
- * Ha nincs ilyen id, a rooms/ oldalra iranyit, egyebkent a rooms/mod/:id oldalra kerulunk.
+ * This mw will load a chosen room from the db
  */
 
 var requireOption = require("../common").requireOption;

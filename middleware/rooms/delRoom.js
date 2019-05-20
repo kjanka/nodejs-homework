@@ -1,7 +1,6 @@
 /**
  *
- * Ez a MW kitorol egy szobat az id alapjan.
- * Torles utan a rooms/ oldalra iranyit.
+ * This mw deletes a chosen room and redirects to the room list
  *
  */
 

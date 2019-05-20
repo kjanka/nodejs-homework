@@ -1,8 +1,7 @@
 /**
  *
- * Ez a MW elmenti a szerkesztett szobat.
- * Ha minden ok, tovabbkuld a szobak listajara.
- * Ha nem, akkor a szerkesztesnel maradunk.
+ * This mw will check if a room is new or one that already exists in the database and has been modified
+ * After that, it will save the room to the db
  */
 
 var requireOption = require("../common").requireOption;

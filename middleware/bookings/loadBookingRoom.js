@@ -1,3 +1,10 @@
+/**
+ * /**
+ * This mw loads the room object of a chosen booking
+ *
+ * REDUNDANT
+ * @type {requireOption}
+ */
 var requireOption = require("../common").requireOption;
 var Booking = require('../../models/booking');
 var Guest = require('../../models/guest');
