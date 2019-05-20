@@ -52,17 +52,14 @@
 
 
 <% for(key in booking_array) { var one_booking = booking_array[key]; %>
-            <%var thisRoom = null;%>
-            <%for(rKey in room_array){var one_room = room_array[rKey];%>
-            <%if(one_booking._room === one_room._id) {thisRoom = one_room.name;}%>
-            <%}%>
+
 
             <tr style="background-color: #ffffff; color: #000000;">
                     <td>
-                        <%= thisRoom %>
+                        <%= one_booking._room.name %>
                     </td>
                     <td>
-                        <%= one_booking._guest%>
+                        <%= one_booking._guest.name%>
                     </td>
                     <td>
                         <%= one_booking.start_date %>
@@ -71,8 +68,8 @@
                     <%= one_booking.end_date %>
                 </td>
                     <td>
-                        <a href="/bookings/mod/<%= one_booking.id %>"><i class="far fa-edit" style="color: #011ffd"></i>
-                            <a href="/bookings/del/<%= one_booking.id %>"><i class="far fa-calendar-times" style="color: #011ffd" ></i>
+                        <a href="/bookings/mod/<%= one_booking.id %>"><i class="far fa-edit" style="color: #011ffd"></i></a>
+                        <a href="/bookings/del/<%= one_booking.id %>"><i class="far fa-calendar-times" style="color: #011ffd" ></i></a>
                     </td>
 
 

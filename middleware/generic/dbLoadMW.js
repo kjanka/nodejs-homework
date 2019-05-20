@@ -31,7 +31,7 @@ module.exports = function (objectrepository) {
             }
         );
 
-        let p3 = Booking.find().exec('find').then(function (result) {
+        let p3 = Booking.find().populate('_room').populate('_guest').exec('find').then(function (result) {
                 console.log("booking db");
                 res.locals.booking_array = result;
 
