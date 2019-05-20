@@ -3,32 +3,32 @@ module.exports = function(app){
 
     var authMW = require('../middleware/generic/auth')
 var renderMW = require('../middleware/generic/render');
-var checkBooking = require('../middleware/bookings/checkBooking');
 var saveBooking = require('../middleware/bookings/saveBooking');
 var loadBooking = require('../middleware/bookings/loadBooking');
 
 var loadBookingRoom = require('../middleware/bookings/loadBookingRoom');
 var loadBookingGuest = require('../middleware/bookings/loadBookingGuest');
-
+var checkBooking = require('../middleware/bookings/checkBooking');
 var delBooking = require('../middleware/bookings/delBooking');
 var loadBookings = require('../middleware/bookings/loadBookings');
 var dbLoadMW = require('../middleware/generic/dbLoadMW');
 var Booking = require('../models/booking');
 
+    const bodyParser = require('body-parser');
+
 var objrep = {};
 
 app.get('/bookings/add', authMW(),
-    checkBooking(new Booking()),
     dbLoadMW(),
-    renderMW(objrep, 'edit_booking'),
-    saveBooking(objrep)
+    renderMW(objrep, 'edit_booking')
 );
 app.post('/bookings/add',
     authMW(),
-    checkBooking(objrep),
-    saveBooking(objrep)
+    dbLoadMW(),
+    bodyParser.urlencoded({ extended: true }),
+    checkBooking(objrep)
     );
-app.get('/bookings/del/:id',
+app.get('/bookings/del/:_id',
     authMW(),
     loadBooking(objrep),
     delBooking(objrep)
@@ -36,22 +36,21 @@ app.get('/bookings/del/:id',
 app.get('/bookings/mod/:_id',
     authMW(),
     loadBooking(objrep),
+    dbLoadMW(),
     loadBookingRoom(objrep),
     loadBookingGuest(objrep),
-    checkBooking(objrep),
-    dbLoadMW(),
     renderMW(objrep, "edit_booking")
     );
 app.post('/bookings/mod/:_id',
     authMW(),
     loadBooking(objrep),
-    checkBooking(objrep),
-    saveBooking(objrep)
+    bodyParser.urlencoded({ extended: true }),
+    checkBooking(objrep)
     );
 app.get('/bookings',
     authMW(),
     dbLoadMW(),
-    loadBookings(objrep),
+    //loadBookings(objrep),
     renderMW(objrep, "bookings")
     );
 

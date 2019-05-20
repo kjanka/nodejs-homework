@@ -24,7 +24,6 @@ module.exports = function (objectrepository) {
         let p2 = Room.find().exec('find').then(function (result) {
                 console.log("room db");
                 res.locals.room_array = result;
-                console.log(res.locals.room_array);
 
             },
             function (err) {

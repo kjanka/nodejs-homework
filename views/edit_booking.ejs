@@ -1,126 +1,128 @@
 <%- include('header', {pagetitle: "Edit booking"}) -%>
-<% var currentBooking = res.locals.currentBooking;%>
-<% var isNew = false;%>
-<% if(currentBooking == null) isNew = true; %>
-<%console.log(isNew);%>
-<%var guest_array = res.locals.guest_array;%>
-<%var room_array = res.locals.room_array;%>
-
+<% var currentBooking = res.locals.currentBooking; %>
+<% var isNew = false; %>
+<% if (currentBooking == null) isNew = true; %>
+<% console.log(isNew); %>
+<% var guest_array = res.locals.guest_array; %>
+<% var room_array = res.locals.room_array; %>
 <% var currentRoom = res.locals.currentRoom; %>
 <% var currentGuest = res.locals.currentGuest; %>
 
-</div>
-<div class="row" style="padding-top: 20px;">
-    <h2 style="color: white">
-
-    </h2>
-
-</div>
-
-<div class="row" style="padding-top: 20px;">
-<div class = "col-3">
-
-    <div class="form-group">
-        <input type="text" class="form-control" id="id" readonly style="background-color: #ffffff; color: #000000; border-color: #ff2281"
-
-        <%if(isNew){%>
-               placeholder="New booking"
-
-        <%}else{%>
-               placeholder=" <%= currentBooking._id %>"
-
-                <%}%>
-        >
+<form method="POST">
     </div>
 
-    <div class="form-group">
+    <div class="row" style="padding-top: 20px;">
+        <h2 style="color: white">
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <label class="input-group-text" for="guestSelect" style="background-color: #FF2281; color: #ffffff">Guest</label>
-            </div>
-            <select class="custom-select" id="guestSelect" style="color: #011ffd; background-color: #FFFFFF">
-
-
-                <%if(isNew){%>
-                <option selected >Choose...</option>
-
-                    <%}%>
-
-                <% for(key in guest_array) { var one_guest = guest_array[key]; %>
-
-<%if((typeof(currentBooking) !== 'undefined')&& (currentGuest.name === one_guest.name)){%>
-                        <option selected >
-                            <%= one_guest.name %>
-                        </option>
-<%}else{%>
-                        <option >
-                            <%= one_guest.name %>
-                        </option>
-
-<%}%>
-                    <%}%>
-
-
-
-
-
-
-            </select>
-        </div>
-
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <label class="input-group-text" for="roomSelect" style="background-color: #FF2281; color: #ffffff">Room</label>
-            </div>
-            <select class="custom-select" id="roomSelect" style="color: #011ffd; background-color: #FFFFFF">
-                <%if(isNew){%>
-                    <option selected >Choose...</option>
-
-                <%}%>
-                <% for (key in room_array){var one_room = room_array[key]; %>
-                    <%if((typeof(currentBooking) !== 'undefined')&& (currentRoom._id === one_room._id)){%>
-                        <option selected >
-                            <%= one_room.name + " - " + one_room.category %>
-                        </option>
-                    <%}else{%>
-                        <option >
-                            <%= one_room.name + " - " + one_room.category %>
-                        </option>
-
-                    <%}%>
-                <%}%>
-
-            </select>
-        </div>
-
-
-
-
-        <label for="startDate">Start date</label>
-        <input type="date" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}[0-9]{2}[0-9]{2}" id="startDate" class="form-control"
-        <%if(!isNew){%>
-                placeholder= <%= (currentBooking.start_date.getMonth() + "/" + currentBooking.start_date.getDay() + "/" + currentBooking.start_date.getFullYear())%>
-               <%console.log(currentBooking.start_date.getDay() + "/" + currentBooking.start_date.getMonth() + "/" + currentBooking.start_date.getFullYear());%>
-
-               <%}%>
-
-        >
-        <label for="endDate">End date</label>
-        <input type="date" id="endDate" class="form-control">
-        <small id="enddatehelp" class="form-text text-muted">
-            The end date should be after the start date. Emphasis on should be, we are too lazy to check at the moment.
-        </small>
-
+        </h2>
 
     </div>
-</div>
-</div>
-<div class = "row">
-    <input type="submit" class="btn btn-primary btn-lg" style="background-color: #011ffd; border-color: #011ffd; color: #ffffff" value = "Done" ></input>
-        <a href = "/bookings"><button type="button" class="btn btn-outline-secondary btn-lg" style=" border-color: #011ffd; color: #011ffd;">Cancel</button>
 
-</div>
+    <div class="row" style="padding-top: 20px;">
+        <div class="col-3">
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="id" readonly
+                       style="background-color: #ffffff; color: #000000; border-color: #ff2281"
+
+                <% if(isNew){ %>
+                       placeholder="New booking"
+
+                <% }else{ %>
+                       placeholder=" <%= currentBooking._id %>"
+
+                        <% } %>
+                >
+            </div>
+
+            <div class="form-group">
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="guestSelect"
+                               style="background-color: #FF2281; color: #ffffff">Guest</label>
+                    </div>
+                    <select class="custom-select" id="guestSelect" style="color: #011ffd; background-color: #FFFFFF" name ="guestSelect">
+
+                        <% if(isNew){ %>
+                            <option selected>Choose...</option>
+
+                        <% } %>
+
+                        <% for(key in guest_array) { var one_guest = guest_array[key]; %>
+
+                        <% if((typeof (currentBooking) !== 'undefined') && (currentGuest.name === one_guest.name)){ %>
+                            <option selected value="<%= one_guest._id%>">
+                                <%= one_guest.name %>
+                            </option>
+                        <% }else{ %>
+                            <option value="<%= one_guest._id%>">
+                                <%= one_guest.name %>
+                            </option>
+
+                        <% } %>
+                        <% } %>
+
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="roomSelect"
+                               style="background-color: #FF2281; color: #ffffff">Room</label>
+                    </div>
+                    <select class="custom-select" id="roomSelect" style="color: #011ffd; background-color: #FFFFFF" name = "roomSelect">
+                        <% if(isNew){ %>
+                            <option selected>Choose...</option>
+
+                        <% } %>
+                        <% for (key in room_array){var one_room = room_array[key]; %>
+                        <% if((typeof (currentBooking) !== 'undefined') && (currentRoom._id === one_room._id)){ %>
+                            <option selected value="<%= one_room._id%>">
+                                <%= one_room.name + " - " + one_room.category %>
+                            </option>
+                        <% }else{ %>
+                            <option value="<%= one_room._id%>">
+                                <%= one_room.name + " - " + one_room.category %>
+                            </option>
+
+                        <% } %>
+                        <% } %>
+
+                    </select>
+                </div>
+
+
+                <label for="startDate">Start date</label>
+                <input type="date" required
+                       id="startDate" class="form-control" name="startDate"
+                        <% if(!isNew){ %>
+                       placeholder= <%= (currentBooking.start_date.getMonth() + "/" + currentBooking.start_date.getDay() + "/" + currentBooking.start_date.getFullYear()) %>
+                       <% console.log(currentBooking.start_date.getDay() + "/" + currentBooking.start_date.getMonth() + "/" + currentBooking.start_date.getFullYear()); %>
+                       <% } %>
+
+                >
+                <label for="endDate">End date</label>
+                <input type="date" required id="endDate" class="form-control" min = startDate.value name="endDate">
+                <small id="enddatehelp" class="form-text text-muted">
+                    The end date should be after the start date. Emphasis on should be, we are too lazy to check at the
+                    moment.
+                </small>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <input type="submit" class="btn btn-primary btn-lg"
+               style="background-color: #011ffd; border-color: #011ffd; color: #ffffff" value="Done"></input>
+            <button type="button" class="btn btn-outline-secondary btn-lg"
+                    style=" border-color: #011ffd; color: #011ffd;">
+                Cancel
+            </button>
+
+    </div>
+</form>
 
 </body>
 </html>

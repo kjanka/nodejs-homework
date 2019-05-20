@@ -1,4 +1,23 @@
 <%- include('header', {pagetitle: "Bookings"}) -%>
+
+<% var guest_array = res.locals.guest_array; %>
+
+<% console.log("------------------guests-------------------")%>
+<% console.log(res.locals.guest_array)%>
+<% console.log("--------------------------------------------")%>
+
+
+<% var room_array = res.locals.room_array; %>
+<% console.log("------------------rooms-------------------")%>
+<% console.log(res.locals.room_array)%>
+<% console.log("--------------------------------------------")%>
+
+<%var booking_array = res.locals.booking_array;%>
+
+<% console.log("------------------bookings-------------------")%>
+<% console.log(res.locals.booking_array)%>
+<% console.log("--------------------------------------------")%>
+
 <div class="row" style="padding-top: 20px;">
     <pre style="color: white">
         This is where you can find the bookings.
@@ -33,14 +52,17 @@
 
 
 <% for(key in booking_array) { var one_booking = booking_array[key]; %>
-
+            <%var thisRoom = null;%>
+            <%for(rKey in room_array){var one_room = room_array[rKey];%>
+            <%if(one_booking._room === one_room._id) {thisRoom = one_room.name;}%>
+            <%}%>
 
             <tr style="background-color: #ffffff; color: #000000;">
                     <td>
-                        <%= one_booking._room %>
+                        <%= thisRoom %>
                     </td>
                     <td>
-                        <%= one_booking._guest %>
+                        <%= one_booking._guest%>
                     </td>
                     <td>
                         <%= one_booking.start_date %>
@@ -50,7 +72,7 @@
                 </td>
                     <td>
                         <a href="/bookings/mod/<%= one_booking.id %>"><i class="far fa-edit" style="color: #011ffd"></i>
-                            <a href="/bookings"><i class="far fa-calendar-times" style="color: #011ffd" ></i>
+                            <a href="/bookings/del/<%= one_booking.id %>"><i class="far fa-calendar-times" style="color: #011ffd" ></i>
                     </td>
 
 
