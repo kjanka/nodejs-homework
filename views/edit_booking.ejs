@@ -76,7 +76,7 @@
                             <option selected>Choose...</option>
 
                         <% } %>
-                        <% for (key in room_array){var one_room = room_array[key]; %>
+                        <% for (rkey in room_array){var one_room = room_array[rkey]; %>
                         <% if((typeof (currentBooking) !== 'undefined') && (currentBooking._room === one_room._id)){ %>
                             <option selected value="<%= one_room._id%>">
                                 <%= one_room.name + " - " + one_room.category %>

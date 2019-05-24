@@ -1,11 +1,7 @@
 module.exports = function(app){
     //app.use (express.static('static'));
 
-    var authMW = function(){
-        return function(req, res, next){
-            return next();
-        };
-    };
+    var authMW = require('../middleware/generic/auth');
     var renderMW = require('../middleware/generic/render');
     var saveRoom = require('../middleware/rooms/saveRoom');
     var loadRoom = require('../middleware/rooms/loadRoom');

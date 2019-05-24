@@ -1,5 +1,13 @@
 var express = require('express');
 var app = express();
+const session = require('express-session');
+
+app.use(
+    session({
+        secret: 'qwe123'
+    })
+);
+
 
 app.set('view engine', 'ejs');
 
@@ -74,17 +82,12 @@ require('./routes/index')(app);
 require('./routes/guests')(app);
 require('./routes/rooms')(app);
 require('./routes/bookings')(app);
+var authMW = require('./middleware/generic/auth');
 
 app.use(function (err, req, res, next) {
     res.status(500).send('Error!!');
 
     console.error(err.stack);
-});
-
-
-
-app.use('/', function(req, res, next){
-    next();
 });
 
 var server = app.listen(3000, function(){

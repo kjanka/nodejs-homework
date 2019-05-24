@@ -1,18 +1,26 @@
 <%- include('header', {pagetitle: "Login page"}) -%>
     </div>
     <div class="row" style="padding-top: 20px; align-content: center">
+        <form method="POST">
         <form>
             <div class="form-group">
                 <label for="exampleUserName" style="color: #FFFFFF">Username</label>
-                <input type="username" class="form-control" id="exampleUserName" aria-describedby="emailHelp" placeholder="Enter username">
+                <input type="username" class="form-control" id="exampleUserName" aria-describedby="emailHelp" placeholder="Enter username" name="username">
 
             </div>
+            <small id="unhelp" class="form-text text-muted">
+                Username is "a"
+            </small>
             <div class="form-group">
                 <label for="exampleInputPassword1" style="color: #FFFFFF">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password" name="password">
             </div>
+            <small id="pwhelp" class="form-text text-muted">
+                Password is "a"
+            </small>
 
            <button type="submit" class="btn btn-primary" style="background-color:#10153A; color: #FFFFFF" >Submit</button>
+        </form>
         </form>
 
     </div>
