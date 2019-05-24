@@ -11,8 +11,6 @@ module.exports = function (o) {
             } else {
                 res.redirect('/login');
             }
-        }else {
-            res.redirect('/login');
         }
     }
 };
